@@ -1,10 +1,12 @@
 package com.doc.mgt.system.docmgt.general.service.implementation;
 
 
+
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -62,6 +64,13 @@ public class GeneralServiceImpl implements GeneralService {
 
         return paged;
     }
+
+    @Override
+    public void createDTOFromModel(Object from, Object to) {
+        log.info("Creating DTO from Model entity");
+        BeanUtils.copyProperties(from, to);
+    }
+
 
     private Response getResponse(String responseCode, String responseMessage, Object data) {
         Response response = new Response();

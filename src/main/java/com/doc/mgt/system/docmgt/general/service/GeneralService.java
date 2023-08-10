@@ -1,6 +1,7 @@
 package com.doc.mgt.system.docmgt.general.service;
 
 
+
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import org.springframework.data.domain.Pageable;
@@ -16,4 +17,6 @@ public interface GeneralService {
 
 
     Pageable getPageableObject(int size, int page);
+
+    void createDTOFromModel(Object from, Object to);
 }

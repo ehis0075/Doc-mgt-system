@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.user.model;
 
+import com.doc.mgt.system.docmgt.role.model.Role;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,7 +13,7 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApplicationUser {
+public class AdminUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,31 +27,20 @@ public class ApplicationUser {
 
     private String password;
 
-    @Column(name = "role")
-    @Enumerated(EnumType.STRING)
-    private UserRole userRole;
+    @ManyToOne
+    @ToString.Exclude
+    private Role userRole;
 
-    private int numberOfFollowers;
-
-    private int numberOfFollowing;
 
 //    private String imageUrl;
 //
 //    private String fileId;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @ToString.Exclude
-    private Set<ApplicationUser> followers;  //people following this user
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @ToString.Exclude
-    private Set<ApplicationUser> following;  //people this user is following
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ApplicationUser)) return false;
-        ApplicationUser that = (ApplicationUser) o;
+        if (!(o instanceof AdminUser)) return false;
+        AdminUser that = (AdminUser) o;
         return Objects.equals(getId(), that.getId());
     }
 

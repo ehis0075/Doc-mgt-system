@@ -2,27 +2,30 @@ package com.doc.mgt.system.docmgt.user.service;
 
 
 import com.doc.mgt.system.docmgt.general.dto.Response;
-import com.doc.mgt.system.docmgt.user.dto.AppUserDTO;
-import com.doc.mgt.system.docmgt.user.dto.SignUpRequest;
-import com.doc.mgt.system.docmgt.user.dto.UserListDTO;
-import com.doc.mgt.system.docmgt.user.dto.UserRequestDTO;
-import com.doc.mgt.system.docmgt.user.model.ApplicationUser;
+import com.doc.mgt.system.docmgt.user.dto.*;
+import com.doc.mgt.system.docmgt.user.model.AdminUser;
 
 public interface UserService {
     Response signIn(String username, String password);
 
-    AppUserDTO signup(SignUpRequest request);
+    AdminUserDTO getOneAdminUser(String email);
 
-    AppUserDTO updateUser(SignUpRequest request, Long userId, String username);
+    AdminUser getUserForLogin(String email);
 
-    void deleteUser(Long userId, String username);
+    void logoutUser(String email);
 
-    AppUserDTO getUserDTO(ApplicationUser request);
+    AdminUserDTO addUser(CreateUpdateUserDTO createAdminUserDto, String performedBy);
 
-    ApplicationUser getUserByUsername(String username);
+    AdminUserDTO updateUser(CreateUpdateUserDTO createAdminUserDto, Long userId, String performedBy);
 
-    ApplicationUser saveUser(ApplicationUser user);
+    void validateThatAdminUserDoesNotExist(String email);
 
-    UserListDTO getAllUsers(UserRequestDTO request);
+    UserListDTO getAllUsers(UserRequestDTO requestDTO);
+
+    AdminUserDTO getUserDTO(AdminUser adminUser);
+
+    UserListDTO getAllUsersByPermissionName(String permissionName);
+
+    boolean signOut(String email);
 
 }

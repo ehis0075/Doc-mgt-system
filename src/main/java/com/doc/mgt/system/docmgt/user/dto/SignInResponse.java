@@ -1,6 +1,6 @@
 package com.doc.mgt.system.docmgt.user.dto;
 
-import com.doc.mgt.system.docmgt.user.model.UserRole;
+import com.doc.mgt.system.docmgt.role.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +10,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class SignInResponse {
     private String username;
-    private UserRole userRole;
+    private Role userRole;
     private String accessToken;
 }

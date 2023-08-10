@@ -11,6 +11,7 @@ public enum ResponseCodeAndMessage {
     REMOTE_REQUEST_FAILED_92("92", "Remote request failed"),
     OPERATION_NOT_SUPPORTED_93("93", "Operation not supported"),
     AUTHENTICATION_FAILED_95("95", "Authentication failed"),
+    CLIENT_NOT_ALLOWED_97("97", "Client not allowed"),
     AN_ERROR_OCCURRED_96("96", "An error occurred"),
     UNAUTHORIZED_97("97", "Invalid or missing JWT token"),
     SYSTEM_ERROR_99("99", "System error"),

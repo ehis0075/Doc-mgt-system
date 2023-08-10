@@ -2,7 +2,7 @@ package com.doc.mgt.system.docmgt.security;
 
 import com.doc.mgt.system.docmgt.exception.GeneralException;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
-import com.doc.mgt.system.docmgt.user.model.UserRole;
+import com.doc.mgt.system.docmgt.role.model.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
@@ -31,7 +31,7 @@ public class JwtTokenProvider {
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
     }
 
-    public String generateToken(String email, UserRole userRole) {
+    public String generateToken(String email, Role userRole) {
         log.info("Request to Generate jwt token for user {}", email);
 
         //set claims

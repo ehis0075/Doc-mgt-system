@@ -1,7 +1,6 @@
 package com.doc.mgt.system.docmgt.user.service.impl;
 
-
-import com.doc.mgt.system.docmgt.user.model.ApplicationUser;
+import com.doc.mgt.system.docmgt.user.model.AdminUser;
 import com.doc.mgt.system.docmgt.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info("Getting the user {} from the db", username);
 
-        ApplicationUser user = userRepository.findByUsername(username);
+        AdminUser user = userRepository.findByUsername(username);
 
         if (Objects.isNull(user)) {
             throw new UsernameNotFoundException("User '" + username + "' not found");
@@ -33,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return org.springframework.security.core.userdetails.User
                 .withUsername(username)
                 .password(user.getPassword())
-                .authorities(user.getUserRole())
+                .authorities(user.getUserRole().getName())
                 .accountExpired(false)
                 .accountLocked(false)
                 .credentialsExpired(false)
