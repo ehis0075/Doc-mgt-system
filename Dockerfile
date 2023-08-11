@@ -15,6 +15,6 @@ FROM openjdk:8-jdk-alpine
 
 WORKDIR /app
 
-COPY --from=build /home/app/target/dms-mgt-service.jar .
+COPY --from=build /home/app/target/dms-service.jar .
 
-ENTRYPOINT ["java", "-jar","dms-mgt-service.jar"]
+ENTRYPOINT ["java", "-jar","dms-service.jar"]

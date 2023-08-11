@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.permission.model;
 
+import com.doc.mgt.system.docmgt.permission.dto.PermissionDTO;
 import com.doc.mgt.system.docmgt.permission.enums.PermissionType;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -35,5 +36,12 @@ public class Permission {
 
     public PermissionType getPermissionType() {
         return this.userA ? PermissionType.USER : PermissionType.SUPER;
+    }
+
+    public static PermissionDTO getPermissionDTO(Permission permission) {
+
+        PermissionDTO permissionDTO = new PermissionDTO();
+        permissionDTO.setName(permission.getName());
+        return permissionDTO;
     }
 }

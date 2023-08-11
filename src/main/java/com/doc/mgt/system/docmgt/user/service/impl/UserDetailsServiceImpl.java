@@ -2,7 +2,6 @@ package com.doc.mgt.system.docmgt.user.service.impl;
 
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
 import com.doc.mgt.system.docmgt.user.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,11 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
+
+    public UserDetailsServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

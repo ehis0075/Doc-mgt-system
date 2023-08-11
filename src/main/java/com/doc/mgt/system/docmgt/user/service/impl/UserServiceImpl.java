@@ -1,15 +1,16 @@
 package com.doc.mgt.system.docmgt.user.service.impl;
 
 import com.doc.mgt.system.docmgt.exception.GeneralException;
-import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
 import com.doc.mgt.system.docmgt.role.model.Role;
 import com.doc.mgt.system.docmgt.role.repository.AdminRoleRepository;
 import com.doc.mgt.system.docmgt.role.service.AdminRoleService;
-import com.doc.mgt.system.docmgt.security.JwtTokenProvider;
-import com.doc.mgt.system.docmgt.user.dto.*;
+import com.doc.mgt.system.docmgt.user.dto.AdminUserDTO;
+import com.doc.mgt.system.docmgt.user.dto.CreateUpdateUserDTO;
+import com.doc.mgt.system.docmgt.user.dto.UserListDTO;
+import com.doc.mgt.system.docmgt.user.dto.UserRequestDTO;
 import com.doc.mgt.system.docmgt.user.imodel.UserBasicInfoI;
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
 import com.doc.mgt.system.docmgt.user.repository.UserRepository;
@@ -19,18 +20,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,45 +35,45 @@ public class UserServiceImpl implements UserService {
 
     private final AdminRoleRepository adminRoleRepository;
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
-    private final JwtTokenProvider jwtTokenProvider;
+    //    private final PasswordEncoder passwordEncoder;
+//    private final JwtTokenProvider jwtTokenProvider;
     private final GeneralService generalService;
-    private final AuthenticationManager authenticationManager;
+//    private final AuthenticationManager authenticationManager;
 
     private final AdminRoleService adminRoleService;
     private final UserRepository adminUserRepository;
 
 
-    @Override
-    public Response signIn(String username, String password) {
-        log.info("Request to login with username {}", username);
-
-        try {
-            // attempt authentication
-            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-
-            //if successful, set authentication object in the security context
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-
-            Role userRole = userRepository.findByUsername(username).getUserRole();
-
-            //generate jwt token
-            String token = jwtTokenProvider.generateToken(username, userRole);
-
-            Response response = new Response();
-            response.setResponseCode(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode);
-            response.setResponseMessage(ResponseCodeAndMessage.SUCCESSFUL_0.responseMessage);
-            response.setData(SignInResponse.builder().username(username).userRole(userRole).accessToken(token).build());
-
-            log.info("Successfully logged-in user {}", username);
-
-            return response;
-
-        } catch (AuthenticationException e) {
-            log.info("Incorrect User credentials");
-            throw new GeneralException(ResponseCodeAndMessage.AUTHENTICATION_FAILED_95);
-        }
-    }
+//    @Override
+//    public Response signIn(String username, String password) {
+//        log.info("Request to login with username {}", username);
+//
+//        try {
+//            // attempt authentication
+//            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+//
+//            //if successful, set authentication object in the security context
+//            SecurityContextHolder.getContext().setAuthentication(authentication);
+//
+//            Role userRole = userRepository.findByUsername(username).getUserRole();
+//
+//            //generate jwt token
+//            String token = jwtTokenProvider.generateToken(username, userRole);
+//
+//            Response response = new Response();
+//            response.setResponseCode(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode);
+//            response.setResponseMessage(ResponseCodeAndMessage.SUCCESSFUL_0.responseMessage);
+//            response.setData(SignInResponse.builder().username(username).userRole(userRole).accessToken(token).build());
+//
+//            log.info("Successfully logged-in user {}", username);
+//
+//            return response;
+//
+//        } catch (AuthenticationException e) {
+//            log.info("Incorrect User credentials");
+//            throw new GeneralException(ResponseCodeAndMessage.AUTHENTICATION_FAILED_95);
+//        }
+//    }
 
     @Override
     public UserListDTO getAllUsers(UserRequestDTO requestDTO) {
@@ -152,7 +147,7 @@ public class UserServiceImpl implements UserService {
         adminUser.setUsername(createUserDto.getUsername());
         adminUser.setEmail(createUserDto.getEmail());
         adminUser.setEmail(email);
-        adminUser.setPassword(passwordEncoder.encode(createUserDto.getPassword()));
+        adminUser.setPassword(createUserDto.getPassword());
         adminUser.setUserRole(role);
 
         // save to db
@@ -242,15 +237,15 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
-    public String logout(HttpServletRequest request, HttpServletResponse response) {
-
-        // Perform any additional cleanup or custom actions here
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        return "redirect:/login?logout";
-    }
+//    public String logout(HttpServletRequest request, HttpServletResponse response) {
+//
+//        // Perform any additional cleanup or custom actions here
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth != null) {
+//            new SecurityContextLogoutHandler().logout(request, response, auth);
+//        }
+//        return "redirect:/login?logout";
+//    }
 
     private List<AdminUserDTO> convertToAdminUserDTOList(List<AdminUser> adminUserList) {
         log.info("Converting Admin User List to Admin User DTO List");

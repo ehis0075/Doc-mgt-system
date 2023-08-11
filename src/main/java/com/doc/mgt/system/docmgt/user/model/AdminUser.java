@@ -1,7 +1,10 @@
 package com.doc.mgt.system.docmgt.user.model;
 
+import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
 import com.doc.mgt.system.docmgt.role.model.Role;
+import com.doc.mgt.system.docmgt.user.dto.AdminUserDTO;
 import lombok.*;
+import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -47,5 +50,18 @@ public class AdminUser {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
+    }
+
+    public static AdminUserDTO getUserDTO(AdminUser adminUser) {
+
+        AdminUserDTO adminUserDTO = new AdminUserDTO();
+
+        BeanUtils.copyProperties(adminUser, adminUserDTO);
+
+        //get role dto
+        RoleDTO roleDTO = Role.getAdminRoleDTO(adminUser.getUserRole());
+        adminUserDTO.setRole(roleDTO);
+
+        return adminUserDTO;
     }
 }

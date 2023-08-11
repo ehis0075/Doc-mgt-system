@@ -6,7 +6,7 @@ import com.doc.mgt.system.docmgt.user.dto.*;
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
 
 public interface UserService {
-    Response signIn(String username, String password);
+//    Response signIn(String username, String password);
 
     AdminUserDTO getOneAdminUser(String email);
 

@@ -1,10 +1,13 @@
 package com.doc.mgt.system.docmgt.role.model;
 
 
+import com.doc.mgt.system.docmgt.permission.dto.PermissionDTO;
 import com.doc.mgt.system.docmgt.permission.model.Permission;
+import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.Hibernate;
+import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -49,5 +52,20 @@ public class Role {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public static RoleDTO getAdminRoleDTO(Role adminRole) {
+
+        RoleDTO adminRoleDTO = new RoleDTO();
+        adminRoleDTO.setName(adminRole.getName());
+//        adminRoleDTO.setPermissions(adminRole.getPermissions().stream().map());
+
+        BeanUtils.copyProperties(adminRole, adminRoleDTO);
+
+//        List<PermissionDTO> permissionDTOList = Permission.getPermissionDTO();
+
+//        adminRoleDTO.setPermissions(permissionDTOList);
+
+        return adminRoleDTO;
     }
 }

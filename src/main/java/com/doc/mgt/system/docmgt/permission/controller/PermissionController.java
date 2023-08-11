@@ -7,7 +7,7 @@ import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.permission.dto.PermissionListDTO;
 import com.doc.mgt.system.docmgt.permission.dto.PermissionRequestDTO;
 import com.doc.mgt.system.docmgt.permission.service.PermissionService;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +25,7 @@ public class PermissionController {
         this.permissionService = permissionService;
     }
 
-    @PreAuthorize("hasAuthority('VIEW_PERMISSION')")
+//    @PreAuthorize("hasAuthority('VIEW_PERMISSION')")
     @PostMapping()
     public Response getAllPermission(@RequestBody PermissionRequestDTO requestDTO) {
         PermissionListDTO data = permissionService.getAllPermission(requestDTO);

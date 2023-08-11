@@ -8,6 +8,5 @@ import java.util.List;
 public class CreateUpdateRoleDTO {
     private String name;
     private List<String> permissionNames;
-    private List<String> columnNames;
 
 }
