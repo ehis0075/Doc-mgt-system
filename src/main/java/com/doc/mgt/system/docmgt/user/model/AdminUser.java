@@ -35,10 +35,6 @@ public class AdminUser {
     private Role userRole;
 
 
-//    private String imageUrl;
-//
-//    private String fileId;
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
