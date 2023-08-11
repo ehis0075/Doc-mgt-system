@@ -30,13 +30,13 @@ public class UserController {
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
-//    @PostMapping("sign-in")
-//    public ResponseEntity<Response> signIn(@RequestBody SignInRequest request) {
-//        Response data = userService.signIn(request.getUsername(), request.getPassword());
-//        if (data.getResponseCode().equals(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode))
-//            return new ResponseEntity<>(data, HttpStatus.OK);
-//        else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-//    }
+    @PostMapping("sign-in")
+    public ResponseEntity<Response> signIn(@RequestBody SignInRequest request) {
+        Response data = userService.signIn(request.getUsername(), request.getPassword());
+        if (data.getResponseCode().equals(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode))
+            return new ResponseEntity<>(data, HttpStatus.OK);
+        else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+    }
 
     @PostMapping("/update/{userId}")
     public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId) {
