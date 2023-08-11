@@ -31,7 +31,10 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
     private UserDetailsServiceImpl userDetailsService;
 
     @Override
-    protected void doFilterInternal(@NotNull HttpServletRequest httpServletRequest, @NotNull HttpServletResponse httpServletResponse, @NotNull FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(
+            @NotNull HttpServletRequest httpServletRequest,
+            @NotNull HttpServletResponse httpServletResponse,
+            @NotNull FilterChain filterChain) throws ServletException, IOException {
         //remove "bearer" and get jwt token
         String token = jwtTokenProvider.resolveToken(httpServletRequest);
 
