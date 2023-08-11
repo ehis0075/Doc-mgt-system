@@ -24,7 +24,7 @@ public class ImageKitServiceImpl implements ImageKitService {
     private String defaultUrl;
 
     @Value("${image.vasPath}")
-    private String VAS;
+    private String DOC;
 
     @Value("${image.tempPath}")
     private String TEMP;
@@ -64,17 +64,17 @@ public class ImageKitServiceImpl implements ImageKitService {
     public boolean moveFileFromTemp(String url) {
         String fileName = url.replace(defaultUrl, "");
 
-        log.info("Moving file => {} to {}", fileName, VAS);
+        log.info("Moving file => {} to {}", fileName, DOC);
         try {
             MoveFileRequest moveFileRequest = new MoveFileRequest();
             moveFileRequest.setSourceFilePath(fileName);
-            moveFileRequest.setDestinationPath(VAS);
+            moveFileRequest.setDestinationPath(DOC);
             ResultNoContent resultNoContent = imageKit.moveFile(moveFileRequest);
             log.info("Response {}", resultNoContent);
 
             return true;
         } catch (Exception ex) {
-            log.error("Failed to move image file {} to location => {}", fileName, VAS);
+            log.error("Failed to move image file {} to location => {}", fileName, DOC);
             log.error(ex.getMessage());
         }
 

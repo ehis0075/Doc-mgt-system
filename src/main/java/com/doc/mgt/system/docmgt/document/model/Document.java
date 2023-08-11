@@ -24,8 +24,6 @@ public class Document {
     @OneToOne
     private DocumentType type;
 
-    private String fileId;
-
     private String url;
 
     @ManyToOne

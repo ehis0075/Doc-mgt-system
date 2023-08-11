@@ -14,6 +14,8 @@ import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.image.service.ImageService;
+import com.doc.mgt.system.docmgt.user.model.AdminUser;
+import com.doc.mgt.system.docmgt.user.service.UserService;
 import com.doc.mgt.system.docmgt.util.GeneralUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -33,13 +35,16 @@ public class DocumentServiceImpl implements DocumentService {
 
     private final DocumentTypeRepository documentTypeRepository;
 
+    private final UserService userService;
+
     private final GeneralService generalService;
 
     private final ImageService imageService;
 
-    public DocumentServiceImpl(DocumentRepository documentRepository, DocumentTypeRepository documentTypeRepository, GeneralService generalService, ImageService imageService) {
+    public DocumentServiceImpl(DocumentRepository documentRepository, DocumentTypeRepository documentTypeRepository, UserService userService, GeneralService generalService, ImageService imageService) {
         this.documentRepository = documentRepository;
         this.documentTypeRepository = documentTypeRepository;
+        this.userService = userService;
         this.generalService = generalService;
         this.imageService = imageService;
     }
@@ -57,6 +62,13 @@ public class DocumentServiceImpl implements DocumentService {
             throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseMessage, "base 64 cannot be null");
         }
 
+        //validate file name
+        boolean exist = documentRepository.existsByName(request.getFileName());
+
+        if(exist){
+            throw new GeneralException(ResponseCodeAndMessage.ALREADY_EXIST_86.responseMessage, "file name already");
+        }
+
         // get Doc type
         Optional<DocumentType> documentType = documentTypeRepository.findById(request.getDocumentTypId());
 
@@ -64,21 +76,20 @@ public class DocumentServiceImpl implements DocumentService {
             throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseMessage, "DocumentType cannot be null");
         }
 
+        // get user
+        AdminUser user = userService.getUserForLogin(username);
+
         Document document = new Document();
         document.setType(documentType.get());
         document.setName(request.getFileName());
+        document.setAdminUser(user);
 
-        // upload doc
-        migrateTempDocument(document, document.getUrl());
-
-//        document.setFileId(fileId);
-//        document.setUrl(url);
-
+        // upload document
+        migrateTempDocument(document, request.getBase64Image());
 
         document = documentRepository.save(document);
 
-        // get doc dto
-
+        // get document dto
         return getDocumentDTO(document.getId());
     }
 
@@ -93,7 +104,7 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public DocumentListDTO getAllDocuments(PageableRequestDTO requestDTO) {
-        log.info("Getting Biller List ");
+        log.info("Getting Document List ");
 
         Pageable paged = generalService.getPageableObject(requestDTO.getSize(), requestDTO.getPage());
         Page<Document> billerPage = documentRepository.findAll(paged);
@@ -110,7 +121,7 @@ public class DocumentServiceImpl implements DocumentService {
         boolean result = imageService.moveFileFromTemp(image);
 
         if (result) {
-            image = image.replace("TEMP", "VAS");
+            image = image.replace("TEMP", "DOC");
             document.setUrl(image);
         }
     }
