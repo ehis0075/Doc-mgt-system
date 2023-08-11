@@ -9,6 +9,7 @@ import com.doc.mgt.system.docmgt.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -24,9 +25,10 @@ public class UserController {
 
     private final GeneralService generalService;
 
+//    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("sign-up")
-    public Response signUp(@Valid @RequestBody CreateUpdateUserDTO signUpRequest) {
-        AdminUserDTO data = userService.addUser(signUpRequest, "");
+    public Response signUp(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, Principal principal) {
+        AdminUserDTO data = userService.addUser(signUpRequest, principal.getName());
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
@@ -38,18 +40,14 @@ public class UserController {
         else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
+//    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("/update/{userId}")
-    public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId) {
-        AdminUserDTO data = userService.updateUser(signUpRequest, userId, "ehis");
+    public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId, Principal principal) {
+        AdminUserDTO data = userService.updateUser(signUpRequest, userId, principal.getName());
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
-//    @PostMapping("/delete/{userId}")
-//    public ResponseEntity<Response> updateUser(@PathVariable Long userId, Principal principal) {
-//        userService.s(userId, principal.getName());
-//        return new ResponseEntity<>(null, HttpStatus.OK);
-//    }
-
+//    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping()
     public Response getAll(@Valid @RequestBody UserRequestDTO request) {
         UserListDTO data = userService.getAllUsers(request);

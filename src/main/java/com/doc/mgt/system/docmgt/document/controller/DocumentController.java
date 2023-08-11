@@ -12,11 +12,13 @@ import com.doc.mgt.system.docmgt.tempStorage.enums.TableName;
 import com.doc.mgt.system.docmgt.tempStorage.enums.TempAction;
 import com.doc.mgt.system.docmgt.tempStorage.service.TempService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.Map;
 import java.util.Objects;
 
@@ -36,10 +38,11 @@ public class DocumentController {
         this.generalService = generalService;
     }
 
+//    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
     @PostMapping("/create")
-    public Response create(@RequestBody UploadDocumentDTO request) {
+    public Response create(@RequestBody UploadDocumentDTO request, Principal principal) {
 
-        String user = "ehis";
+        String user = principal.getName();
 
         log.info("request to create upload a doc with payload ----> {}, by {}", request.getDocumentTypId(), user);
         String fileId = uploadDocToTemp(request);
@@ -49,10 +52,11 @@ public class DocumentController {
 
     }
 
+//    @PreAuthorize("hasAuthority('VIEW_DOCUMENT')")
     @PostMapping()
-    public Response getAllDocuments(@RequestBody PageableRequestDTO request) {
+    public Response getAllDocuments(@RequestBody PageableRequestDTO request, Principal principal) {
 
-        String user = "ehis";
+        String user = principal.getName();
         DocumentListDTO data = documentService.getAllDocuments(request);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
 

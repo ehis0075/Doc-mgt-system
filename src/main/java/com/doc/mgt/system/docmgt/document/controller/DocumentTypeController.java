@@ -10,6 +10,7 @@ import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,7 @@ public class DocumentTypeController {
         this.generalService = generalService;
     }
 
+//    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
     @PostMapping("/create")
     public Response createDocumentType(@RequestBody CreateDocumentTypeDTO requestDTO) {
 
@@ -37,6 +39,7 @@ public class DocumentTypeController {
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
+//    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
     @PostMapping()
     public Response getAll(@RequestBody PageableRequestDTO requestDTO) {
 

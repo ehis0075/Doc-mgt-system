@@ -24,7 +24,7 @@ public class Temp {
 
     private String serviceName;
 
-    @Column(name = "new_data", columnDefinition = "varchar(max)")
+    @Column(name = "new_data")
     private String newData;
 
     private Long oldDataId;
