@@ -11,7 +11,7 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 # Package stage
 #
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk-alpinev
 
 WORKDIR /app
 
