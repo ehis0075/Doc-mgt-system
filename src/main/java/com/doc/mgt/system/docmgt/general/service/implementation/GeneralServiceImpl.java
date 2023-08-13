@@ -1,35 +1,52 @@
 package com.doc.mgt.system.docmgt.general.service.implementation;
 
 
+
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
+import com.doc.mgt.system.docmgt.image.service.ImageService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
 import java.util.Objects;
 
 @Slf4j
 @Service
 public class GeneralServiceImpl implements GeneralService {
 
+    private final ImageService imageService;
+
 
     @Value("${max-pull-size:100}")
     private int maxPullSize;
 
 
-    public GeneralServiceImpl() {
+    public GeneralServiceImpl(ImageService imageService) {
 
+        this.imageService = imageService;
     }
 
     @Override
     public boolean isStringInvalid(String string) {
         log.info("checking if \"{}\" is valid", string);
         return Objects.isNull(string) || string.trim().equals("");
+    }
+
+    @Override
+    public Map<String, String> uploadImageToTemp(String base64, String fileName) {
+        if (Objects.isNull(base64) || base64.startsWith("https")) {
+            return null;
+        }
+
+        fileName = fileName.replaceAll(" ", "_");
+        return imageService.upload(base64, fileName);
     }
 
     @Override
@@ -62,6 +79,13 @@ public class GeneralServiceImpl implements GeneralService {
 
         return paged;
     }
+
+    @Override
+    public void createDTOFromModel(Object from, Object to) {
+        log.info("Creating DTO from Model entity");
+        BeanUtils.copyProperties(from, to);
+    }
+
 
     private Response getResponse(String responseCode, String responseMessage, Object data) {
         Response response = new Response();

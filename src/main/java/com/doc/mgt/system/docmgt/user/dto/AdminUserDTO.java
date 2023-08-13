@@ -1,22 +1,20 @@
 package com.doc.mgt.system.docmgt.user.dto;
 
-import com.doc.mgt.system.docmgt.user.model.UserRole;
+import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
 import lombok.Data;
 
 @Data
-public class AppUserDTO {
+public class AdminUserDTO {
+
+    private Long id;
 
     private String username;
 
     private String email;
 
-    private UserRole role;
+    private RoleDTO role;
 
 //    private String imageUrl;
-
-    private int followerCount;
-
-    private int followingCount;
 //
 //    private String fileId;
 

@@ -13,5 +13,5 @@ import java.util.List;
 public class UserListDTO extends PageableResponseDTO {
 
     @JsonProperty("users")
-    private List<AppUserDTO> userDTOList;
+    private List<AdminUserDTO> userDTOList;
 }

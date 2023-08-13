@@ -1,6 +1,10 @@
 package com.doc.mgt.system.docmgt.user.model;
 
+import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
+import com.doc.mgt.system.docmgt.role.model.Role;
+import com.doc.mgt.system.docmgt.user.dto.AdminUserDTO;
 import lombok.*;
+import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -12,7 +16,7 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApplicationUser {
+public class AdminUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,36 +30,34 @@ public class ApplicationUser {
 
     private String password;
 
-    @Column(name = "role")
-    @Enumerated(EnumType.STRING)
-    private UserRole userRole;
-
-    private int numberOfFollowers;
-
-    private int numberOfFollowing;
-
-//    private String imageUrl;
-//
-//    private String fileId;
-
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToOne
     @ToString.Exclude
-    private Set<ApplicationUser> followers;  //people following this user
+    private Role userRole;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @ToString.Exclude
-    private Set<ApplicationUser> following;  //people this user is following
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ApplicationUser)) return false;
-        ApplicationUser that = (ApplicationUser) o;
+        if (!(o instanceof AdminUser)) return false;
+        AdminUser that = (AdminUser) o;
         return Objects.equals(getId(), that.getId());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getId());
+    }
+
+    public static AdminUserDTO getUserDTO(AdminUser adminUser) {
+
+        AdminUserDTO adminUserDTO = new AdminUserDTO();
+
+        BeanUtils.copyProperties(adminUser, adminUserDTO);
+
+        //get role dto
+        RoleDTO roleDTO = Role.getAdminRoleDTO(adminUser.getUserRole());
+        adminUserDTO.setRole(roleDTO);
+
+        return adminUserDTO;
     }
 }
