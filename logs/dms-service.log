@@ -1144,3 +1144,514 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.micros
 2023-08-11 22:46:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-08-11 22:46:32 - HikariPool-1 - Shutdown initiated...
 2023-08-11 22:46:32 - HikariPool-1 - Shutdown completed.
+2023-08-13 19:52:13 - Starting DocMgtApplication using Java 20.0.2 on DEAN-MACHINE with PID 21236 (C:\Users\Dean\Desktop\Doc-mgt-system\target\classes started by Dean in C:\Users\Dean\Desktop\Doc-mgt-system)
+2023-08-13 19:52:13 - The following profiles are active: dev
+2023-08-13 19:52:13 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-13 19:52:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-13 19:52:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-13 19:52:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-13 19:52:17 - Finished Spring Data repository scanning in 148 ms. Found 6 JPA repository interfaces.
+2023-08-13 19:52:18 - Tomcat initialized with port(s): 8080 (http)
+2023-08-13 19:52:19 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:52:19 - Starting service [Tomcat]
+2023-08-13 19:52:19 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-13 19:52:19 - Initializing Spring embedded WebApplicationContext
+2023-08-13 19:52:19 - Root WebApplicationContext: initialization completed in 5458 ms
+2023-08-13 19:52:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-13 19:52:19 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-13 19:52:20 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-13 19:52:20 - HikariPool-1 - Starting...
+2023-08-13 19:52:20 - HikariPool-1 - Start completed.
+2023-08-13 19:52:20 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-13 19:52:23 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-13 19:52:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 19:52:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-13 19:52:26 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34a576dc, org.springframework.security.web.context.SecurityContextPersistenceFilter@b064da0, org.springframework.security.web.header.HeaderWriterFilter@19676cb6, org.springframework.web.filter.CorsFilter@57ca00f1, org.springframework.security.web.authentication.logout.LogoutFilter@3faaa619, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@1bf14fb6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30dcd62, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@560a51, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49a00fbd, org.springframework.security.web.session.SessionManagementFilter@77d26fac, org.springframework.security.web.access.ExceptionTranslationFilter@4dd7286d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b14495e]
+2023-08-13 19:52:26 - LiveReload server is running on port 35729
+2023-08-13 19:52:27 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:52:27 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-13 19:52:28 - Creating new permission CREATE_USER
+2023-08-13 19:52:28 - Creating new permission VIEW_USER
+2023-08-13 19:52:28 - Creating new permission VIEW_PERMISSION
+2023-08-13 19:52:28 - Creating new permission CREATE_ROLE
+2023-08-13 19:52:28 - Creating new permission UPDATE_ROLE
+2023-08-13 19:52:28 - Creating new permission DELETE_ROLE
+2023-08-13 19:52:28 - Creating new permission VIEW_ROLE
+2023-08-13 19:52:28 - Creating new permission VIEW_DOCUMENT
+2023-08-13 19:52:28 - Creating new permission UPLOAD_DOCUMENT
+2023-08-13 19:52:28 - Getting Admin Role using name => Super Admin
+2023-08-13 19:52:28 - :: Saving the first set of Super admin...
+2023-08-13 19:52:28 - SQL Error: 0, SQLState: 23502
+2023-08-13 19:52:28 - ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (1, ehis@gmail.com, null, null, $2a$10$RLJI4J1m/LeSuW550lldfuuv74XBorVhwbRU9M9zQp9Se9UOJ.l66, null, ehis, 1).
+2023-08-13 19:52:28 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:52:28 - Stopping service [Tomcat]
+2023-08-13 19:52:28 - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-13 19:52:28 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:52:28 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:52:28 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-13 19:52:28 - Application run failed
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [number_of_followers" of relation "application_users]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$FastClassBySpringCGLIB$$12b24d05.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$EnhancerBySpringCGLIB$$bdd6de93.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.doc.mgt.system.docmgt.DocMgtApplication.main(DocMgtApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:109)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy126.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:624)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:658)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:638)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 38 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (1, ehis@gmail.com, null, null, $2a$10$RLJI4J1m/LeSuW550lldfuuv74XBorVhwbRU9M9zQp9Se9UOJ.l66, null, ehis, 1).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 82 common frames omitted
+2023-08-13 19:52:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 19:52:28 - HikariPool-1 - Shutdown initiated...
+2023-08-13 19:52:28 - HikariPool-1 - Shutdown completed.
+2023-08-13 19:54:10 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-13 19:54:10 - Starting DocMgtApplication using Java 20.0.2 on DEAN-MACHINE with PID 15504 (C:\Users\Dean\Desktop\Doc-mgt-system\target\classes started by Dean in C:\Users\Dean\Desktop\Doc-mgt-system)
+2023-08-13 19:54:10 - The following profiles are active: dev
+2023-08-13 19:54:10 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-13 19:54:10 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-13 19:54:13 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-13 19:54:13 - Finished Spring Data repository scanning in 185 ms. Found 6 JPA repository interfaces.
+2023-08-13 19:54:14 - Tomcat initialized with port(s): 8080 (http)
+2023-08-13 19:54:14 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:54:14 - Starting service [Tomcat]
+2023-08-13 19:54:14 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-13 19:54:15 - Initializing Spring embedded WebApplicationContext
+2023-08-13 19:54:15 - Root WebApplicationContext: initialization completed in 4898 ms
+2023-08-13 19:54:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-13 19:54:15 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-13 19:54:16 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-13 19:54:16 - HikariPool-1 - Starting...
+2023-08-13 19:54:16 - HikariPool-1 - Start completed.
+2023-08-13 19:54:16 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-13 19:54:18 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-13 19:54:18 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 19:54:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-13 19:54:21 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@de9bfc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@7bcbde, org.springframework.security.web.header.HeaderWriterFilter@4da18b8c, org.springframework.web.filter.CorsFilter@69579f5f, org.springframework.security.web.authentication.logout.LogoutFilter@15d154c1, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@7433dff2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b683f23, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e0efbbe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25807487, org.springframework.security.web.session.SessionManagementFilter@693599fe, org.springframework.security.web.access.ExceptionTranslationFilter@27dd03d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@706fbd1d]
+2023-08-13 19:54:22 - LiveReload server is running on port 35729
+2023-08-13 19:54:22 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:54:22 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-13 19:54:23 - Creating new permission CREATE_USER
+2023-08-13 19:54:23 - Creating new permission VIEW_USER
+2023-08-13 19:54:23 - Creating new permission VIEW_PERMISSION
+2023-08-13 19:54:23 - Creating new permission CREATE_ROLE
+2023-08-13 19:54:23 - Creating new permission UPDATE_ROLE
+2023-08-13 19:54:23 - Creating new permission DELETE_ROLE
+2023-08-13 19:54:23 - Creating new permission VIEW_ROLE
+2023-08-13 19:54:23 - Creating new permission VIEW_DOCUMENT
+2023-08-13 19:54:23 - Creating new permission UPLOAD_DOCUMENT
+2023-08-13 19:54:23 - Getting Admin Role using name => Super Admin
+2023-08-13 19:54:23 - :: Saving the first set of Super admin...
+2023-08-13 19:54:23 - SQL Error: 0, SQLState: 23502
+2023-08-13 19:54:23 - ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (2, ehis@gmail.com, null, null, $2a$10$U8iz7f5jpn42qP0PRdwTK..eRh4Aj2ZhXxi5dOL4iKutdjiV.L2ei, null, ehis, 2).
+2023-08-13 19:54:23 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:54:23 - Stopping service [Tomcat]
+2023-08-13 19:54:23 - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-13 19:54:23 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:54:23 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-13 19:54:23 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-13 19:54:23 - Application run failed
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [number_of_followers" of relation "application_users]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$FastClassBySpringCGLIB$$12b24d05.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$EnhancerBySpringCGLIB$$52f63b4e.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.doc.mgt.system.docmgt.DocMgtApplication.main(DocMgtApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:109)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy126.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:624)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:658)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:638)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 38 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (2, ehis@gmail.com, null, null, $2a$10$U8iz7f5jpn42qP0PRdwTK..eRh4Aj2ZhXxi5dOL4iKutdjiV.L2ei, null, ehis, 2).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 83 common frames omitted
+2023-08-13 19:54:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 19:54:23 - HikariPool-1 - Shutdown initiated...
+2023-08-13 19:54:23 - HikariPool-1 - Shutdown completed.
+2023-08-13 20:38:57 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-13 20:38:57 - Starting DocMgtApplication using Java 20.0.2 on DEAN-MACHINE with PID 11724 (C:\Users\Dean\Desktop\Doc-mgt-system\target\classes started by Dean in C:\Users\Dean\Desktop\Doc-mgt-system)
+2023-08-13 20:38:57 - The following profiles are active: dev
+2023-08-13 20:38:58 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-13 20:38:58 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-13 20:39:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-13 20:39:00 - Finished Spring Data repository scanning in 167 ms. Found 6 JPA repository interfaces.
+2023-08-13 20:39:02 - Tomcat initialized with port(s): 8080 (http)
+2023-08-13 20:39:02 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-13 20:39:02 - Starting service [Tomcat]
+2023-08-13 20:39:02 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-13 20:39:02 - Initializing Spring embedded WebApplicationContext
+2023-08-13 20:39:02 - Root WebApplicationContext: initialization completed in 4487 ms
+2023-08-13 20:39:02 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-13 20:39:03 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-13 20:39:03 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-13 20:39:03 - HikariPool-1 - Starting...
+2023-08-13 20:39:04 - HikariPool-1 - Start completed.
+2023-08-13 20:39:04 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-13 20:39:07 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-13 20:39:07 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 20:39:10 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-13 20:39:10 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dfdac53, org.springframework.security.web.context.SecurityContextPersistenceFilter@64cc61c0, org.springframework.security.web.header.HeaderWriterFilter@750719ab, org.springframework.web.filter.CorsFilter@6692297b, org.springframework.security.web.authentication.logout.LogoutFilter@6a31ba69, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@65d76f3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@628055f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29c2f186, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7482bc77, org.springframework.security.web.session.SessionManagementFilter@466b918f, org.springframework.security.web.access.ExceptionTranslationFilter@6467c1ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@20bafffb]
+2023-08-13 20:39:11 - LiveReload server is running on port 35729
+2023-08-13 20:39:11 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-13 20:39:11 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-13 20:39:12 - Creating new permission CREATE_USER
+2023-08-13 20:39:12 - Creating new permission VIEW_USER
+2023-08-13 20:39:12 - Creating new permission VIEW_PERMISSION
+2023-08-13 20:39:12 - Creating new permission CREATE_ROLE
+2023-08-13 20:39:12 - Creating new permission UPDATE_ROLE
+2023-08-13 20:39:12 - Creating new permission DELETE_ROLE
+2023-08-13 20:39:12 - Creating new permission VIEW_ROLE
+2023-08-13 20:39:12 - Creating new permission VIEW_DOCUMENT
+2023-08-13 20:39:12 - Creating new permission UPLOAD_DOCUMENT
+2023-08-13 20:39:12 - Getting Admin Role using name => Super Admin
+2023-08-13 20:39:12 - :: Saving the first set of Super admin...
+2023-08-13 20:39:12 - SQL Error: 0, SQLState: 23502
+2023-08-13 20:39:12 - ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (3, ehis@gmail.com, null, null, $2a$10$hHKakaTdDo4wuetWslR9rO5hN5q0lJiuFg66l96WG9lpzNzqqUMru, null, ehis, 3).
+2023-08-13 20:39:13 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-13 20:39:13 - Stopping service [Tomcat]
+2023-08-13 20:39:13 - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-08-13 20:39:13 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-13 20:39:13 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-13 20:39:13 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-13 20:39:13 - Application run failed
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [number_of_followers" of relation "application_users]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$FastClassBySpringCGLIB$$12b24d05.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.doc.mgt.system.docmgt.startup.SetupDataLoader$$EnhancerBySpringCGLIB$$632ab004.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.doc.mgt.system.docmgt.DocMgtApplication.main(DocMgtApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:109)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy126.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:624)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:658)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:638)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 38 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (3, ehis@gmail.com, null, null, $2a$10$hHKakaTdDo4wuetWslR9rO5hN5q0lJiuFg66l96WG9lpzNzqqUMru, null, ehis, 3).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 82 common frames omitted
+2023-08-13 20:39:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-13 20:39:13 - HikariPool-1 - Shutdown initiated...
+2023-08-13 20:39:13 - HikariPool-1 - Shutdown completed.
