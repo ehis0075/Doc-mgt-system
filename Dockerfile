@@ -11,10 +11,13 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 # Package stage
 #
-FROM openjdk:8-jdk-alpinev
+FROM openjdk:8-jdk-alpine
 
 WORKDIR /app
 
 COPY --from=build /home/app/target/dms-service.jar .
 
 ENTRYPOINT ["java", "-jar","dms-service.jar"]
+
+
+
