@@ -18,3 +18,6 @@ WORKDIR /app
 COPY --from=build /home/app/target/dms-service.jar .
 
 ENTRYPOINT ["java", "-jar","dms-service.jar"]
+
+
+
