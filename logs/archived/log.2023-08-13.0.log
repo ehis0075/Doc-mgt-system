@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 2023-08-13 13:31:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h49m19s56ms746µs600ns).
 2023-08-13 14:41:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39s353ms919µs200ns).
 2023-08-13 17:49:52 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h5m44s946ms653µs500ns).
@@ -28,6 +29,8 @@
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2023-08-13 18:55:02 - Application run failed
 =======
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 2023-08-11 07:08:40 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h58m52s19ms934µs800ns).
@@ -991,7 +994,10 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.micros
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2023-08-11 22:45:53 - Application run failed
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
@@ -1019,10 +1025,14 @@ Caused by: org.springframework.boot.web.server.WebServerException: Unable to sta
 	... 13 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthorizationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#79d0e3b6' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#79d0e3b6': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthorizationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthorizationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthorizationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1072,10 +1082,14 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	... 18 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#79d0e3b6' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#79d0e3b6': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes\com\doc\mgt\system\docmgt\user\service\impl\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1096,10 +1110,14 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	... 60 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#79d0e3b6' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#79d0e3b6': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.doc.mgt.system.docmgt.user.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#227499b2' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1121,10 +1139,14 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 73 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#79d0e3b6': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#227499b2': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1140,10 +1162,14 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 87 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1163,10 +1189,14 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	... 95 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> origin/master
+=======
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
@@ -1188,6 +1218,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 107 common frames omitted
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
@@ -1200,6 +1231,8 @@ Caused by: java.lang.RuntimeException: Failed to load driver class org.postgresq
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.microsoft.sqlserver.jdbc.SQLServerDriver
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
@@ -1209,7 +1242,10 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.micros
 	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:241)
 	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:193)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
@@ -1220,6 +1256,7 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.micros
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
 	... 122 common frames omitted
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 2023-08-13 18:57:16 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 22924 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
@@ -1497,6 +1534,8 @@ org.postgresql.util.PSQLException: ERROR: value too long for type character vary
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 2023-08-11 22:46:07 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests], using SpringBootContextLoader
 2023-08-11 22:46:07 - Could not detect default resource locations for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
 2023-08-11 22:46:07 - Could not detect default configuration classes for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: DocMgtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
@@ -1633,7 +1672,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
@@ -1657,6 +1699,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1677,6 +1720,8 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
@@ -1686,7 +1731,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
@@ -1706,6 +1754,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -1869,6 +1918,11 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "numbe
 Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
   Detail: Failing row contains (1, ehis@gmail.com, null, null, $2a$10$RLJI4J1m/LeSuW550lldfuuv74XBorVhwbRU9M9zQp9Se9UOJ.l66, null, ehis, 1).
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+	... 38 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (1, ehis@gmail.com, null, null, $2a$10$RLJI4J1m/LeSuW550lldfuuv74XBorVhwbRU9M9zQp9Se9UOJ.l66, null, ehis, 1).
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
@@ -1879,6 +1933,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "numbe
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
@@ -6894,6 +6949,8 @@ org.springframework.orm.jpa.JpaSystemException: could not execute query; nested 
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	... 82 common frames omitted
 2023-08-13 19:52:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-08-13 19:52:28 - HikariPool-1 - Shutdown initiated...
@@ -6959,7 +7016,10 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [number_of_followers" of relation "application_users]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
@@ -6970,6 +7030,7 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
 =======
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
@@ -6977,10 +7038,14 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 =======
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at jdk.proxy3/jdk.proxy3.$Proxy136.findByToken(Unknown Source)
@@ -7594,6 +7659,8 @@ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "c
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
@@ -7617,7 +7684,10 @@ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "c
 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
@@ -7627,6 +7697,7 @@ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "c
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
 	at com.doc.mgt.system.docmgt.DocMgtApplication.main(DocMgtApplication.java:10)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -8142,6 +8213,8 @@ org.postgresql.util.PSQLException: ERROR: value too long for type character vary
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
@@ -8152,7 +8225,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
@@ -8176,6 +8252,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -8196,6 +8273,8 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
@@ -8206,7 +8285,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
@@ -8226,6 +8308,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -8393,6 +8476,11 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "numbe
 Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
   Detail: Failing row contains (2, ehis@gmail.com, null, null, $2a$10$U8iz7f5jpn42qP0PRdwTK..eRh4Aj2ZhXxi5dOL4iKutdjiV.L2ei, null, ehis, 2).
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+	... 38 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
+  Detail: Failing row contains (2, ehis@gmail.com, null, null, $2a$10$U8iz7f5jpn42qP0PRdwTK..eRh4Aj2ZhXxi5dOL4iKutdjiV.L2ei, null, ehis, 2).
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
@@ -8405,7 +8493,10 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "numbe
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	... 83 common frames omitted
@@ -8522,7 +8613,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
@@ -8546,6 +8640,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -8566,6 +8661,8 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
@@ -8575,7 +8672,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
@@ -8597,7 +8697,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	... 38 common frames omitted
@@ -8735,7 +8838,10 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -8744,6 +8850,7 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at jdk.proxy3/jdk.proxy3.$Proxy135.save(Unknown Source)
@@ -8942,6 +9049,8 @@ org.postgresql.util.PSQLException: Large Objects may not be used in auto-commit 
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
@@ -9016,7 +9125,10 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
@@ -9028,6 +9140,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -9290,6 +9403,8 @@ org.springframework.orm.jpa.JpaSystemException: could not execute query; nested 
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	... 38 common frames omitted
 Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "number_of_followers" of relation "application_users" violates not-null constraint
   Detail: Failing row contains (4, ehis@gmail.com, null, null, $2a$10$Avv9cJjnCkqsuqjPvJOW8eJlzp2QrVsWj7mld5EaJwC90hhJPFiRu, null, ehis, 4).
@@ -9368,7 +9483,10 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [number_of_followers" of relation "application_users]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
@@ -9379,6 +9497,7 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
 =======
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
@@ -9386,10 +9505,14 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 =======
 	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	at jdk.proxy3/jdk.proxy3.$Proxy136.findByToken(Unknown Source)
@@ -9868,6 +9991,8 @@ org.postgresql.util.PSQLException: Large Objects may not be used in auto-commit 
 =======
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 	at jdk.proxy3/jdk.proxy3.$Proxy131.saveAll(Unknown Source)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:73)
 	at com.doc.mgt.system.docmgt.startup.SetupDataLoader.onApplicationEvent(SetupDataLoader.java:23)
@@ -9968,6 +10093,9 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "numbe
 2023-08-13 23:43:07 - HikariPool-1 - Shutdown initiated...
 2023-08-13 23:43:07 - HikariPool-1 - Shutdown completed.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
 =======
 >>>>>>> 7baa8b1f0e146d0af7be15c1279f631f5a7a4db8
