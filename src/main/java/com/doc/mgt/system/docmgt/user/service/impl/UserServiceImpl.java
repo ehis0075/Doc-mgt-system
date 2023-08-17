@@ -27,6 +27,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -55,7 +56,8 @@ public class UserServiceImpl implements UserService {
 
         try {
             // attempt authentication
-            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(username, password));
 
             //if successful, set authentication object in the security context
             SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -78,6 +80,29 @@ public class UserServiceImpl implements UserService {
             log.info("Incorrect User credentials");
             throw new GeneralException(ResponseCodeAndMessage.AUTHENTICATION_FAILED_95);
         }
+    }
+
+    @Override
+    public Response signOut(HttpServletRequest request) {
+        //extract jwt token from request header
+        final String jwtToken = jwtTokenProvider.resolveToken(request);
+
+        //check for jwt token validation
+        if (jwtTokenProvider.validateToken(jwtToken)) {
+            String userName = jwtTokenProvider.getUsername(jwtToken);
+            //clear the
+            SecurityContextHolder.clearContext();
+
+            Response response = new Response();
+            response.setResponseCode(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode);
+            response.setResponseMessage(ResponseCodeAndMessage.SUCCESSFUL_0.responseMessage);
+            response.setData(SignOutResponse.builder().message(userName + " successfully logged out").build());
+
+            log.info("Successfully logged user: {} out", userName);
+            return response;
+        }
+        log.info("Jwt Token is invalid");
+        throw new GeneralException(ResponseCodeAndMessage.AUTHENTICATION_FAILED_95);
     }
 
     @Override

@@ -5,8 +5,11 @@ import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.user.dto.*;
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface UserService {
     Response signIn(String username, String password);
+    Response signOut(HttpServletRequest request);
 
     AdminUserDTO getOneAdminUser(String email);
 

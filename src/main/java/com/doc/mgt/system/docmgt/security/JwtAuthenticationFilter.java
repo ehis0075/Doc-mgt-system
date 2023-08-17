@@ -16,7 +16,10 @@ public class JwtAuthenticationFilter implements AuthenticationEntryPoint {
 
 
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse httpServletResponse, AuthenticationException authException) throws IOException {
+    public void commence(
+            HttpServletRequest request,
+            HttpServletResponse httpServletResponse,
+            AuthenticationException authException) throws IOException {
         // Set the content type of the httpServletResponse to indicate it's JSON
         httpServletResponse.setContentType("application/json");
 
