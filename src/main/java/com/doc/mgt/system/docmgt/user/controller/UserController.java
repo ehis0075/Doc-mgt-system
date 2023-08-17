@@ -6,10 +6,8 @@ import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.user.dto.*;
 import com.doc.mgt.system.docmgt.user.service.UserService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -18,14 +16,22 @@ import java.security.Principal;
 
 @RestController
 @RequestMapping("api/v1/users")
-@RequiredArgsConstructor
 public class UserController {
 
+    //    private final HttpServletRequest request;
+//    private final HttpServletResponse response;
+//    private final Authentication authentication;
     private final UserService userService;
 
     private final GeneralService generalService;
 
-//    @PreAuthorize("hasAuthority('CREATE_USER')")
+    public UserController(UserService userService, GeneralService generalService) {
+
+        this.userService = userService;
+        this.generalService = generalService;
+    }
+
+    //    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("sign-up")
     public Response signUp(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, Principal principal) {
         AdminUserDTO data = userService.addUser(signUpRequest, principal.getName());
@@ -40,14 +46,20 @@ public class UserController {
         else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
-//    @PreAuthorize("hasAuthority('CREATE_USER')")
+//    @PostMapping("sign-out")
+//    public ResponseEntity<?> signOut() {
+//        userService.logoutUser(request, response, authentication);
+//        return new ResponseEntity<>("Log out successful", HttpStatus.OK);
+//    }
+
+    //    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("/update/{userId}")
     public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId, Principal principal) {
         AdminUserDTO data = userService.updateUser(signUpRequest, userId, principal.getName());
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
-//    @PreAuthorize("hasAuthority('CREATE_USER')")
+    //    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping()
     public Response getAll(@Valid @RequestBody UserRequestDTO request) {
         UserListDTO data = userService.getAllUsers(request);

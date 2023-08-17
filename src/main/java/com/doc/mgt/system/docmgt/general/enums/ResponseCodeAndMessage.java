@@ -5,7 +5,7 @@ public enum ResponseCodeAndMessage {
     SUCCESSFUL_0("0", "Successful"),
     TIMEOUT_ERROR_87("87", "Timeout error"),
     RECORD_NOT_FOUND_88("88", "Record not found"),
-    DOCUMENT_NOT_FOUND_89("89", "Biller not found"),
+    DOCUMENT_NOT_FOUND_89("89", "Document not found"),
     INVALID_JSON_REQUEST_DATA_90("90", "Invalid JSON request data"),
     INCOMPLETE_PARAMETERS_91("91", "Incomplete parameters"),
     REMOTE_REQUEST_FAILED_92("92", "Remote request failed"),

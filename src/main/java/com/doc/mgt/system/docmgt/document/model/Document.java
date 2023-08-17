@@ -1,9 +1,8 @@
 package com.doc.mgt.system.docmgt.document.model;
 
-import com.doc.mgt.system.docmgt.document.dto.DocumentDTO;
 import com.doc.mgt.system.docmgt.document.dto.CreateDocumentTypeDTO;
-import com.doc.mgt.system.docmgt.user.dto.AdminUserDTO;
-import com.doc.mgt.system.docmgt.user.model.AdminUser;
+import com.doc.mgt.system.docmgt.document.dto.DocumentDTO;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
@@ -26,17 +25,27 @@ public class Document {
 
     private String url;
 
-    @ManyToOne
-    private AdminUser adminUser;
+    private String fileId;
+
+    private boolean isApproved = false;
+
+    @Enumerated(EnumType.STRING)
+    private TempStatus status = TempStatus.PENDING;
+
+    private String createdBy;
+
+    private String modifiedBy;
+
+    private String reason;
 
     public static DocumentDTO getDocumentDTO(Document document) {
         DocumentDTO documentDTO = new DocumentDTO();
         BeanUtils.copyProperties(document, documentDTO);
 
-        if (Objects.nonNull(document.getAdminUser())) {
-            AdminUserDTO adminUserDTO = AdminUser.getUserDTO(document.getAdminUser());
-            documentDTO.setAdminUser(adminUserDTO);
-        }
+//        if (Objects.nonNull(document.getCreatedBy())) {
+//            AdminUserDTO adminUserDTO = AdminUser.getUserDTO(document.getCreatedBy());
+//            documentDTO.setAdminUser(adminUserDTO);
+//        }
 
         if (Objects.nonNull(document.getType())) {
             CreateDocumentTypeDTO createDocumentTypeDTO = DocumentType.getDocumentTypeDTO(document.getType());
