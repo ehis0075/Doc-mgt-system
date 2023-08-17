@@ -24,16 +24,6 @@ public class TempController {
         this.generalService = generalService;
     }
 
-//    @PostMapping("/all/{tableName}")
-//    public Response getAllTempsByTableName(@RequestBody TempListRequestDTO request,
-//                                           @PathVariable TableName tableName,
-//                                           @RequestParam(required = false, defaultValue = "ALL") TempStatus status) {
-//
-//        TempListDTO data = tempService.getTempListByTableName(request, tableName, status);
-//        return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
-//    }
-
-
     @PostMapping("/performAction/{documentId}")
     public Response performTempAction(@RequestBody TempPerformActionDTO performActionDTO, @PathVariable Long documentId, Principal principal) {
         String loggedInUser = principal.getName();
@@ -41,6 +31,5 @@ public class TempController {
         TempResponseDTO data = tempService.performTempActionForDoc(performActionDTO, documentId, loggedInUser);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
-
 
 }

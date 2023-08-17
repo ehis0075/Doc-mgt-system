@@ -14,8 +14,7 @@ import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.image.service.ImageService;
-import com.doc.mgt.system.docmgt.user.model.AdminUser;
-import com.doc.mgt.system.docmgt.user.service.UserService;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import com.doc.mgt.system.docmgt.util.GeneralUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -24,6 +23,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -103,18 +103,32 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public DocumentListDTO getAllDocuments(PageableRequestDTO requestDTO) {
-        log.info("Getting Document List ");
+        log.info("Getting Document List with {}", requestDTO);
 
         Pageable paged = generalService.getPageableObject(requestDTO.getSize(), requestDTO.getPage());
-        Page<Document> billerPage = documentRepository.findAll(paged);
+        Page<Document> documentPage = documentRepository.findAll(paged);
 
-        return getDocumentListDTO(billerPage);
+        return getDocumentListDTO(documentPage);
     }
 
     @Override
     public Document getDocumentById(Long id) {
         return documentRepository.findById(id)
                 .orElseThrow(() -> new GeneralException(ResponseCodeAndMessage.DOCUMENT_NOT_FOUND_89));
+    }
+
+    @Override
+    public DocumentListDTO getDocumentListByStatus(TempStatus status, PageableRequestDTO requestDTO, String username) {
+        log.info("Request to get all documents with status {}, by {}", status, username);
+
+        if (Objects.isNull(status)) {
+            throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Status cannot be empty");
+        }
+
+        Pageable paged = generalService.getPageableObject(requestDTO.getSize(), requestDTO.getPage());
+        Page<Document> documentPage = documentRepository.findAllByStatus(status, paged);
+
+        return getDocumentListDTO(documentPage);
     }
 
     private void migrateTempDocument(Document document, String image) {

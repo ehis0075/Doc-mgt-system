@@ -8,12 +8,9 @@ import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
-import com.doc.mgt.system.docmgt.tempStorage.service.TempService;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Map;
@@ -39,7 +36,7 @@ public class DocumentController {
 
         String user = principal.getName();
 
-        log.info("request to upload a document with payload ----> {}, by {}", request.getDocumentTypId(), user);
+        log.info("request to upload a document of type {} and file name {}, by {}", request.getDocumentTypId(), request.getFileName(), user);
         Map<String, String> result = uploadDocument(request);
 
         DocumentDTO data = documentService.saveDocument(request, user, result);
@@ -57,19 +54,19 @@ public class DocumentController {
 
     }
 
+    @PostMapping("getAll/{status}")
+    public Response getDocumentListByStatus(@RequestBody PageableRequestDTO request, @PathVariable TempStatus status, Principal principal) {
 
-    // @ToDO create api to get all Document with pending status for approval
+        String user = principal.getName();
+        DocumentListDTO data = documentService.getDocumentListByStatus(status, request, user);
+        return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
+
+    }
 
     private Map<String, String> uploadDocument(UploadDocumentDTO request) {
         Map<String, String> fileIdAndImage = generalService.uploadImageToTemp(request.getBase64Image(), request.getFileName());
         if (Objects.nonNull(fileIdAndImage)) {
             log.info("uploading document");
-
-//            String fieldId = fileIdAndImage.get("fileId");
-//            String url = fileIdAndImage.get("url");
-
-//            request.setBase64Image(url);
-
 
             return fileIdAndImage;
         } else {

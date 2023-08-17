@@ -6,6 +6,7 @@ import com.doc.mgt.system.docmgt.document.dto.DocumentListDTO;
 import com.doc.mgt.system.docmgt.document.dto.UploadDocumentDTO;
 import com.doc.mgt.system.docmgt.document.model.Document;
 import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 
 import java.util.Map;
 
@@ -18,4 +19,6 @@ public interface DocumentService {
     DocumentListDTO getAllDocuments(PageableRequestDTO requestDTO);
 
     Document getDocumentById(Long id);
+
+    DocumentListDTO getDocumentListByStatus(TempStatus status, PageableRequestDTO requestDTO, String username);
 }

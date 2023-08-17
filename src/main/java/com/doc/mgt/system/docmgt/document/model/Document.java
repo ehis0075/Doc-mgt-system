@@ -42,11 +42,6 @@ public class Document {
         DocumentDTO documentDTO = new DocumentDTO();
         BeanUtils.copyProperties(document, documentDTO);
 
-//        if (Objects.nonNull(document.getCreatedBy())) {
-//            AdminUserDTO adminUserDTO = AdminUser.getUserDTO(document.getCreatedBy());
-//            documentDTO.setAdminUser(adminUserDTO);
-//        }
-
         if (Objects.nonNull(document.getType())) {
             CreateDocumentTypeDTO createDocumentTypeDTO = DocumentType.getDocumentTypeDTO(document.getType());
             documentDTO.setType(createDocumentTypeDTO);
