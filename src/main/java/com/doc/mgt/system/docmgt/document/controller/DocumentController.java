@@ -9,10 +9,10 @@ import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
+import com.doc.mgt.system.docmgt.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.Map;
 import java.util.Objects;
 
@@ -25,16 +25,19 @@ public class DocumentController {
     private final DocumentService documentService;
     private final GeneralService generalService;
 
-    public DocumentController(DocumentService documentService, GeneralService generalService) {
+    private final UserService userService;
+
+    public DocumentController(DocumentService documentService, GeneralService generalService, UserService userService) {
         this.documentService = documentService;
         this.generalService = generalService;
+        this.userService = userService;
     }
 
     //    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
     @PostMapping("/create")
-    public Response create(@RequestBody UploadDocumentDTO request, Principal principal) {
+    public Response create(@RequestBody UploadDocumentDTO request) {
 
-        String user = principal.getName();
+        String user = userService.getLoggedInUser();
 
         log.info("request to upload a document of type {} and file name {}, by {}", request.getDocumentTypId(), request.getFileName(), user);
         Map<String, String> result = uploadDocument(request);
@@ -46,18 +49,18 @@ public class DocumentController {
 
     //    @PreAuthorize("hasAuthority('VIEW_DOCUMENT')")
     @PostMapping()
-    public Response getAllDocuments(@RequestBody PageableRequestDTO request, Principal principal) {
+    public Response getAllDocuments(@RequestBody PageableRequestDTO request) {
 
-        String user = principal.getName();
         DocumentListDTO data = documentService.getAllDocuments(request);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
 
     }
 
     @PostMapping("getAll/{status}")
-    public Response getDocumentListByStatus(@RequestBody PageableRequestDTO request, @PathVariable TempStatus status, Principal principal) {
+    public Response getDocumentListByStatus(@RequestBody PageableRequestDTO request, @PathVariable TempStatus status) {
 
-        String user = principal.getName();
+        String user = userService.getLoggedInUser();
+
         DocumentListDTO data = documentService.getDocumentListByStatus(status, request, user);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
 

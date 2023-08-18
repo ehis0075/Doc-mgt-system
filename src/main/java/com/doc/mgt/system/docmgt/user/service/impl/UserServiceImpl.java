@@ -30,7 +30,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -139,18 +138,18 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-//    @Override
-//    public void logoutUser(HttpServletRequest request,HttpServletResponse  response, Authentication authentication) {
-//        log.info("Logging out User using Email => {}", authentication.getPrincipal());
-//
-//        // call auth service to log out
-//        logoutService.logout(request, response, authentication);
-//
-//    }
+    @Override
+    public String getLoggedInUser() {
+        log.info("Getting logged in user");
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return authentication.getName();
+
+    }
 
     @Override
     public AdminUserDTO addUser(CreateUpdateUserDTO createUserDto, String performedBy) {
-        log.info("creating a user with payload = {}", createUserDto);
+        log.info("creating a user with payload {} by user {}", createUserDto, performedBy);
 
         //validate first name, last name and phone number
         GeneralUtil.validateUsernameAndEmail(createUserDto.getUsername(), createUserDto.getEmail());
@@ -185,7 +184,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AdminUserDTO updateUser(CreateUpdateUserDTO createAdminUserDto, Long adminUserId, String performedBy) {
-        log.info("Request to update an admin user with admin user id = {} with payload = {}", adminUserId, createAdminUserDto);
+        log.info("Request to update a user with user id {} with payload {} by user {}", adminUserId, createAdminUserDto, performedBy);
 
         AdminUser adminUser = getAdminUserById(adminUserId);
         Role role = adminUser.getUserRole();
@@ -197,7 +196,7 @@ public class UserServiceImpl implements UserService {
 
         // check that user cannot modify itself
         if (Objects.equals(adminUser.getEmail(), performedBy)) {
-            throw new GeneralException(ResponseCodeAndMessage.OPERATION_NOT_SUPPORTED_93.responseMessage, "Logged in Admin user cannot modify itself!");
+            throw new GeneralException(ResponseCodeAndMessage.OPERATION_NOT_SUPPORTED_93.responseMessage, "Logged in user cannot modify itself!");
         }
 
         adminUser.setUserRole(role);
@@ -288,11 +287,6 @@ public class UserServiceImpl implements UserService {
     }
 
     private void validateEmail(String email) {
-
-//        if (GeneralUtil.invalidEmail(email)) {
-//            log.info("Admin User email {} is invalid", email);
-//            throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Admin User Email " + email + " is invalid!");
-//        }
 
         if (adminUserRepository.existsByEmail(email)) {
             throw new GeneralException(ResponseCodeAndMessage.ALREADY_EXIST_86.responseCode, "Email already exist");

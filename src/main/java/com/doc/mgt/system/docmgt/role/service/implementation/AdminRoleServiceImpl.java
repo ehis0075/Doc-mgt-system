@@ -62,7 +62,7 @@ public class AdminRoleServiceImpl implements AdminRoleService {
 
     @Override
     public RoleDTO addRole(CreateUpdateRoleDTO requestDTO, String performedBy) {
-        log.info("Request to create a Role with payload = {}", requestDTO);
+        log.info("Request to create a Role with payload {} by user {}", requestDTO, performedBy);
 
         //check if role name is valid
         if (GeneralUtil.stringIsNullOrEmpty(requestDTO.getName())) {

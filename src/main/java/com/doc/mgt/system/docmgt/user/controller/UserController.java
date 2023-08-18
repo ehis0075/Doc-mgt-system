@@ -11,16 +11,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.security.Principal;
 
 
 @RestController
 @RequestMapping("api/v1/users")
 public class UserController {
 
-    //    private final HttpServletRequest request;
-//    private final HttpServletResponse response;
-//    private final Authentication authentication;
     private final UserService userService;
 
     private final GeneralService generalService;
@@ -33,8 +29,11 @@ public class UserController {
 
     //    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("sign-up")
-    public Response signUp(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, Principal principal) {
-        AdminUserDTO data = userService.addUser(signUpRequest, principal.getName());
+    public Response signUp(@Valid @RequestBody CreateUpdateUserDTO signUpRequest) {
+
+        String user = userService.getLoggedInUser();
+
+        AdminUserDTO data = userService.addUser(signUpRequest, user);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 
@@ -54,8 +53,11 @@ public class UserController {
 
     //    @PreAuthorize("hasAuthority('CREATE_USER')")
     @PostMapping("/update/{userId}")
-    public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId, Principal principal) {
-        AdminUserDTO data = userService.updateUser(signUpRequest, userId, principal.getName());
+    public Response updateUser(@Valid @RequestBody CreateUpdateUserDTO signUpRequest, @PathVariable Long userId) {
+
+        String user = userService.getLoggedInUser();
+
+        AdminUserDTO data = userService.updateUser(signUpRequest, userId, user);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
     }
 

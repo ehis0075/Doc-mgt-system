@@ -16,6 +16,8 @@ public interface UserService {
 
 //    void logoutUser(HttpServletRequest request, HttpServletResponse response, Authentication authentication);
 
+    String getLoggedInUser();
+
     AdminUserDTO addUser(CreateUpdateUserDTO createAdminUserDto, String performedBy);
 
     AdminUserDTO updateUser(CreateUpdateUserDTO createAdminUserDto, Long userId, String performedBy);
