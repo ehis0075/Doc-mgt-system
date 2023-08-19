@@ -3,22 +3,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: 1.8
+      java: openjdk-1.8
     commands:
-      - echo "Installing dependencies..."
-      - apt-get update && apt-get install -y maven
-
-  pre_build:
-    commands:
-      - echo "Executing pre-build tasks..."
-      # You can add any necessary pre-build commands here.
+      - echo "Installing Java 1.8"
+      - sudo apt install openjdk-1.8-jdk
 
   build:
     commands:
-      - echo "Building Spring Boot application..."
+      - echo "Building the Java application"
       - mvn clean install
 
-artifacts:
-  files:
-    - target/*.jar
-  name: dms-service.jar
+  deploy:
+    commands:
+      - echo "Deploying the Java application"
+      - docker build -t dms-service .
+      - docker run -d -p 8085:8085 dms-service
