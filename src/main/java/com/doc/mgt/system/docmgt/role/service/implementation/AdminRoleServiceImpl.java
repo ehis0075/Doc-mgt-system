@@ -107,6 +107,11 @@ public class AdminRoleServiceImpl implements AdminRoleService {
             validateRoleName(requestDTO.getName());
         }
 
+        // check that permissionNames is not null
+        if(!arePermissionNamesValid(requestDTO.getPermissionNames())){
+            throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Permission Names cannot be null or empty!");
+        }
+
         //permission
         List<Permission> permissions = requestDTO.getPermissionNames().stream().map(permissionService::findByName).collect(Collectors.toList());
 
@@ -131,10 +136,15 @@ public class AdminRoleServiceImpl implements AdminRoleService {
     public void deleteRole(Long roleId, String performedBy) {
         log.info("Deleting an admin role with id = {}", roleId);
 
+        // check if roleId is valid
+        if (roleId == null) {
+            throw new GeneralException(ResponseCodeAndMessage.RECORD_NOT_FOUND_88.responseCode, "Role Id cannot be null");
+        }
+
         // get role
         Optional<Role> validRole = adminRoleRepository.findById(roleId);
 
-        if (validRole.isPresent()) {
+        if (!validRole.isPresent()) {
             throw new GeneralException(ResponseCodeAndMessage.RECORD_NOT_FOUND_88.responseCode, "Admin Role does not exist");
         }
 
@@ -179,6 +189,11 @@ public class AdminRoleServiceImpl implements AdminRoleService {
 
         return adminRoleDTO;
     }
+
+    public boolean arePermissionNamesValid(List<String> permissionNames) {
+        return permissionNames != null && !permissionNames.isEmpty();
+    }
+
 
     private Role getRoleById(Long roleId) {
         return adminRoleRepository.findById(roleId).orElseThrow(() -> new GeneralException(ResponseCodeAndMessage.RECORD_NOT_FOUND_88));

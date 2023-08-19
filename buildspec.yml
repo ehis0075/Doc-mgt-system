@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - echo "Installing dependencies..."
+      - apt-get update && apt-get install -y maven
+
+  pre_build:
+    commands:
+      - echo "Executing pre-build tasks..."
+      # You can add any necessary pre-build commands here.
+
+  build:
+    commands:
+      - echo "Building Spring Boot application..."
+      - mvn clean install
+
+artifacts:
+  files:
+    - target/*.jar
+  name: dms-service.jar
