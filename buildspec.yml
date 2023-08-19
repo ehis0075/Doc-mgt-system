@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk-1.8
+    commands:
+      - echo "Installing dependencies..."
+      - sudo apt-get update && apt-get install -y maven
+
+  build:
+    commands:
+      - echo "Building Spring Boot application..."
+      - mvn clean install
+
+artifacts:
+  files:
+    - target/*.jar
+  name: dms-service

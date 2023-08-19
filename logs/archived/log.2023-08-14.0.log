@@ -1,0 +1,340 @@
+2023-08-14 00:01:52 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m7s279ms610µs800ns).
+2023-08-14 00:02:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s414ms499µs700ns).
+2023-08-14 00:31:02 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m17s944ms148µs400ns).
+2023-08-14 06:38:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h8m29s231ms980µs700ns).
+2023-08-14 07:30:23 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m51s90ms807µs100ns).
+2023-08-14 09:26:49 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m24s652ms731µs400ns).
+2023-08-14 09:44:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m10s600ms377µs300ns).
+2023-08-14 11:29:13 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m13s634ms838µs900ns).
+2023-08-14 11:42:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:42:50 - HikariPool-1 - Shutdown initiated...
+2023-08-14 11:42:50 - HikariPool-1 - Shutdown completed.
+2023-08-14 11:44:50 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 11:44:50 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 15432 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 11:44:50 - The following profiles are active: local
+2023-08-14 11:44:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 11:44:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 11:44:52 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 11:44:52 - Finished Spring Data repository scanning in 194 ms. Found 6 JPA repository interfaces.
+2023-08-14 11:44:53 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 11:44:53 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:44:53 - Starting service [Tomcat]
+2023-08-14 11:44:53 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 11:44:53 - Initializing Spring embedded WebApplicationContext
+2023-08-14 11:44:53 - Root WebApplicationContext: initialization completed in 2969 ms
+2023-08-14 11:44:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 11:44:53 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 11:44:54 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 11:44:54 - HikariPool-1 - Starting...
+2023-08-14 11:44:54 - HikariPool-1 - Start completed.
+2023-08-14 11:44:54 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_hx5mobydpcpjm91q9whfv6q9t" of relation "application_users" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_7jfa3b1cslffw0dktrxp51qc3" of relation "application_users" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_36vs45u76s1n950kwxfa5lyhc" of relation "document" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_h5lw8msm8gi7ylc2j1m0rpxuy" of relation "document_type" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_2ojme20jpga3r4r79tdso17gi" of relation "permission" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_8sewwnpamngi6b1dwaa88askk" of relation "role" does not exist, skipping
+2023-08-14 11:44:56 - SQL Warning Code: 0, SQLState: 00000
+2023-08-14 11:44:56 - constraint "uk_pddrhgwxnms2aceeku9s2ewy5" of relation "token" does not exist, skipping
+2023-08-14 11:44:56 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 11:44:56 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:44:57 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 11:44:58 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6828d2f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@8a69537, org.springframework.security.web.header.HeaderWriterFilter@6a647ddb, org.springframework.web.filter.CorsFilter@55337344, org.springframework.security.web.authentication.logout.LogoutFilter@52de1e7d, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@188fcb04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61c65644, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54df16d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14c204ac, org.springframework.security.web.session.SessionManagementFilter@4d132117, org.springframework.security.web.access.ExceptionTranslationFilter@25ba1d4e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3afc552e]
+2023-08-14 11:44:58 - LiveReload server is running on port 35729
+2023-08-14 11:44:58 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:44:58 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 11:44:59 - Creating new permission CREATE_USER
+2023-08-14 11:44:59 - Creating new permission VIEW_USER
+2023-08-14 11:44:59 - Creating new permission VIEW_PERMISSION
+2023-08-14 11:44:59 - Creating new permission CREATE_ROLE
+2023-08-14 11:44:59 - Creating new permission UPDATE_ROLE
+2023-08-14 11:44:59 - Creating new permission DELETE_ROLE
+2023-08-14 11:44:59 - Creating new permission VIEW_ROLE
+2023-08-14 11:44:59 - Creating new permission VIEW_DOCUMENT
+2023-08-14 11:44:59 - Creating new permission UPLOAD_DOCUMENT
+2023-08-14 11:44:59 - Getting Admin Role using name => Super Admin
+2023-08-14 11:44:59 - :: Saving the first set of Super admin...
+2023-08-14 11:44:59 - Started DocMgtApplication in 9.454 seconds (JVM running for 11.193)
+2023-08-14 11:45:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-14 11:45:12 - Initializing Servlet 'dispatcherServlet'
+2023-08-14 11:45:12 - Completed initialization in 3 ms
+2023-08-14 11:45:13 - Request to login with username ehis
+2023-08-14 11:45:13 - Getting the user ehis from the db
+2023-08-14 11:45:13 - Request to Generate jwt token for user ehis
+2023-08-14 11:45:13 - Successfully logged-in user ehis
+2023-08-14 11:46:32 - Request to validate token
+2023-08-14 11:46:32 - Getting the user ehis from the db
+2023-08-14 11:46:32 - Request to validate token
+2023-08-14 11:46:32 - Getting the user ehis from the db
+2023-08-14 11:46:32 - Request to save Document Type with request CreateDocumentTypeDTO(type=PDF)
+2023-08-14 11:46:32 - ResponseCode => 0, message => Successful and data => DocumentTypeDTO(type=PDF)
+2023-08-14 11:47:54 - Request to validate token
+2023-08-14 11:47:54 - Getting the user ehis from the db
+2023-08-14 11:47:54 - Request to validate token
+2023-08-14 11:47:54 - Getting the user ehis from the db
+2023-08-14 11:47:54 - request to upload a document with payload ----> 1, by ehis
+2023-08-14 11:47:54 - Request to upload base64 image with fileName => New_PDF_file to imageKit
+2023-08-14 11:47:58 - Successfully uploaded the file => New_PDF_file, url => https://ik.imagekit.io/ikgk9zvzt/TEMP/New_PDF_file and file ID => 64da066888c257da33f69c91
+2023-08-14 11:47:58 - fileId=>64da066888c257da33f69c91 and url=>https://ik.imagekit.io/ikgk9zvzt/TEMP/New_PDF_file
+2023-08-14 11:47:58 - uploading document
+2023-08-14 11:47:58 - Request to save uploaded document New PDF file bu user ehis
+2023-08-14 11:47:58 - Validating that user => ehis exist in db 
+2023-08-14 11:47:58 - Error occurred, error message is 88
+2023-08-14 11:47:58 - ResponseCode => 88, message => Record not found and data => null
+2023-08-14 11:47:58 - Resolved [com.doc.mgt.system.docmgt.exception.GeneralException: 88]
+2023-08-14 11:52:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:52:13 - HikariPool-1 - Shutdown initiated...
+2023-08-14 11:52:13 - HikariPool-1 - Shutdown completed.
+2023-08-14 11:52:21 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 11:52:21 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 22544 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 11:52:21 - The following profiles are active: local
+2023-08-14 11:52:21 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 11:52:21 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 11:52:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 11:52:22 - Finished Spring Data repository scanning in 148 ms. Found 6 JPA repository interfaces.
+2023-08-14 11:52:23 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 11:52:23 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:52:23 - Starting service [Tomcat]
+2023-08-14 11:52:23 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 11:52:23 - Initializing Spring embedded WebApplicationContext
+2023-08-14 11:52:23 - Root WebApplicationContext: initialization completed in 2160 ms
+2023-08-14 11:52:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 11:52:23 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 11:52:23 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 11:52:24 - HikariPool-1 - Starting...
+2023-08-14 11:52:24 - HikariPool-1 - Start completed.
+2023-08-14 11:52:24 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 11:52:25 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 11:52:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:52:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 11:52:26 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7005cbe9, org.springframework.security.web.context.SecurityContextPersistenceFilter@8a26d67, org.springframework.security.web.header.HeaderWriterFilter@6b3d750b, org.springframework.web.filter.CorsFilter@6239dfd, org.springframework.security.web.authentication.logout.LogoutFilter@5675640b, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@77b9f0e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@533a47c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29c668f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b6dc81f, org.springframework.security.web.session.SessionManagementFilter@4d311fd1, org.springframework.security.web.access.ExceptionTranslationFilter@63a8179, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5af064f6]
+2023-08-14 11:52:26 - LiveReload server is running on port 35729
+2023-08-14 11:52:27 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:52:27 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 11:52:27 - Getting Admin Role using name => Super Admin
+2023-08-14 11:52:27 - Started DocMgtApplication in 7.15 seconds (JVM running for 8.498)
+2023-08-14 11:53:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:53:39 - HikariPool-1 - Shutdown initiated...
+2023-08-14 11:53:39 - HikariPool-1 - Shutdown completed.
+2023-08-14 11:53:43 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 11:53:43 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 12744 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 11:53:43 - The following profiles are active: local
+2023-08-14 11:53:43 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 11:53:43 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 11:53:44 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 11:53:44 - Finished Spring Data repository scanning in 150 ms. Found 6 JPA repository interfaces.
+2023-08-14 11:53:45 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 11:53:45 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:53:45 - Starting service [Tomcat]
+2023-08-14 11:53:45 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 11:53:45 - Initializing Spring embedded WebApplicationContext
+2023-08-14 11:53:45 - Root WebApplicationContext: initialization completed in 2200 ms
+2023-08-14 11:53:45 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 11:53:45 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 11:53:45 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 11:53:46 - HikariPool-1 - Starting...
+2023-08-14 11:53:46 - HikariPool-1 - Start completed.
+2023-08-14 11:53:46 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 11:53:47 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 11:53:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:53:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 11:53:48 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2767591c, org.springframework.security.web.context.SecurityContextPersistenceFilter@65108764, org.springframework.security.web.header.HeaderWriterFilter@5ef2dc0d, org.springframework.web.filter.CorsFilter@2694c6ad, org.springframework.security.web.authentication.logout.LogoutFilter@602623ea, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@32c22d29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ca143f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5661b009, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36053366, org.springframework.security.web.session.SessionManagementFilter@67766cd3, org.springframework.security.web.access.ExceptionTranslationFilter@71e9581a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6bd34ec2]
+2023-08-14 11:53:48 - LiveReload server is running on port 35729
+2023-08-14 11:53:49 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:53:49 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 11:53:49 - Getting Admin Role using name => Super Admin
+2023-08-14 11:53:49 - Started DocMgtApplication in 6.956 seconds (JVM running for 8.028)
+2023-08-14 11:54:14 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:54:14 - HikariPool-1 - Shutdown initiated...
+2023-08-14 11:54:14 - HikariPool-1 - Shutdown completed.
+2023-08-14 11:54:20 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 11876 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 11:54:20 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 11:54:20 - The following profiles are active: local
+2023-08-14 11:54:20 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 11:54:20 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 11:54:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 11:54:22 - Finished Spring Data repository scanning in 168 ms. Found 6 JPA repository interfaces.
+2023-08-14 11:54:22 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 11:54:22 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:54:22 - Starting service [Tomcat]
+2023-08-14 11:54:22 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 11:54:23 - Initializing Spring embedded WebApplicationContext
+2023-08-14 11:54:23 - Root WebApplicationContext: initialization completed in 2426 ms
+2023-08-14 11:54:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 11:54:23 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 11:54:23 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 11:54:23 - HikariPool-1 - Starting...
+2023-08-14 11:54:23 - HikariPool-1 - Start completed.
+2023-08-14 11:54:23 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 11:54:24 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 11:54:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 11:54:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 11:54:26 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e2d7e10, org.springframework.security.web.context.SecurityContextPersistenceFilter@286d54e7, org.springframework.security.web.header.HeaderWriterFilter@123d6bff, org.springframework.web.filter.CorsFilter@7db47079, org.springframework.security.web.authentication.logout.LogoutFilter@7d83d944, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@4583b059, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e1520bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e49112d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@129dc366, org.springframework.security.web.session.SessionManagementFilter@2b5aebb2, org.springframework.security.web.access.ExceptionTranslationFilter@3415bba8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5aef3254]
+2023-08-14 11:54:26 - LiveReload server is running on port 35729
+2023-08-14 11:54:26 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 11:54:26 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 11:54:27 - Getting Admin Role using name => Super Admin
+2023-08-14 11:54:27 - Started DocMgtApplication in 7.607 seconds (JVM running for 9.311)
+2023-08-14 11:54:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-14 11:54:33 - Initializing Servlet 'dispatcherServlet'
+2023-08-14 11:54:33 - Completed initialization in 1 ms
+2023-08-14 11:54:33 - Request to login with username ehis
+2023-08-14 11:54:33 - Getting the user ehis from the db
+2023-08-14 11:54:34 - Request to Generate jwt token for user ehis
+2023-08-14 11:54:34 - Successfully logged-in user ehis
+2023-08-14 11:55:13 - Request to validate token
+2023-08-14 11:55:13 - Getting the user ehis from the db
+2023-08-14 11:55:13 - Request to validate token
+2023-08-14 11:55:13 - Getting the user ehis from the db
+2023-08-14 11:55:13 - request to upload a document with payload ----> 1, by ehis
+2023-08-14 11:55:13 - Request to upload base64 image with fileName => New_PDF_file to imageKit
+2023-08-14 11:55:17 - Successfully uploaded the file => New_PDF_file, url => https://ik.imagekit.io/ikgk9zvzt/TEMP/New_PDF_file and file ID => 64da081f88c257da33fba331
+2023-08-14 11:55:17 - fileId=>64da081f88c257da33fba331 and url=>https://ik.imagekit.io/ikgk9zvzt/TEMP/New_PDF_file
+2023-08-14 11:55:17 - uploading document
+2023-08-14 11:55:17 - Request to save uploaded document New PDF file bu user ehis
+2023-08-14 11:55:17 - Validating that user => ehis exist in db 
+2023-08-14 11:55:17 - Getting Document using document ID => 1
+2023-08-14 11:55:17 - ResponseCode => 0, message => Successful and data => DocumentDTO(name=New PDF file, type=CreateDocumentTypeDTO(type=PDF), fileId=null, url=https://ik.imagekit.io/ikgk9zvzt/TEMP/New_PDF_file, adminUser=AdminUserDTO(id=1, username=ehis, email=ehis@gmail.com, role=RoleDTO(id=1, name=Super Admin, permissions=null)))
+2023-08-14 11:56:32 - Request to validate token
+2023-08-14 11:56:32 - Getting the user ehis from the db
+2023-08-14 11:56:32 - Request to validate token
+2023-08-14 11:56:32 - Getting the user ehis from the db
+2023-08-14 11:56:32 - creating a user with payload = CreateUpdateUserDTO(username=matt, email=matt@gmail.com, roleId=1, password=matt123)
+2023-08-14 11:56:32 - ::: saving admin user to db :::
+2023-08-14 11:56:32 - Converting Admin User to Admin User DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - Converting Permission to Permission DTO
+2023-08-14 11:56:32 - Creating DTO from Model entity
+2023-08-14 11:56:32 - ResponseCode => 0, message => Successful and data => AdminUserDTO(id=2, username=matt, email=matt@gmail.com, role=RoleDTO(id=1, name=Super Admin, permissions=[PermissionDTO(id=2, name=VIEW_USER), PermissionDTO(id=8, name=VIEW_DOCUMENT), PermissionDTO(id=6, name=DELETE_ROLE), PermissionDTO(id=4, name=CREATE_ROLE), PermissionDTO(id=3, name=VIEW_PERMISSION), PermissionDTO(id=5, name=UPDATE_ROLE), PermissionDTO(id=1, name=CREATE_USER), PermissionDTO(id=7, name=VIEW_ROLE), PermissionDTO(id=9, name=UPLOAD_DOCUMENT)]))
+2023-08-14 11:56:43 - Request to login with username matt
+2023-08-14 11:56:43 - Getting the user matt from the db
+2023-08-14 11:56:43 - Request to Generate jwt token for user matt
+2023-08-14 11:56:43 - Successfully logged-in user matt
+2023-08-14 11:58:52 - Request to validate token
+2023-08-14 11:58:52 - Getting the user matt from the db
+2023-08-14 11:58:52 - Request to validate token
+2023-08-14 11:58:52 - Getting the user matt from the db
+2023-08-14 11:58:52 - Request to approve document uploadTempPerformActionDTO(reason=okay, status=APPROVED), by matt
+2023-08-14 11:58:52 - Performing Temp action on document id => 1 with status => APPROVED
+2023-08-14 11:58:52 - Validating that user => matt exist in db 
+2023-08-14 11:58:52 - Performing approved action
+2023-08-14 11:58:52 - Updating temp record with id => 1, status => APPROVED and reason => okay
+2023-08-14 11:58:52 - ResponseCode => 0, message => Successful and data => TempResponseDTO(result=APPROVED Successfully)
+2023-08-14 12:00:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 12:00:13 - HikariPool-1 - Shutdown initiated...
+2023-08-14 12:00:13 - HikariPool-1 - Shutdown completed.
+2023-08-14 12:00:18 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 35240 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 12:00:18 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 12:00:18 - The following profiles are active: local
+2023-08-14 12:00:18 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 12:00:18 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 12:00:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 12:00:19 - Finished Spring Data repository scanning in 133 ms. Found 6 JPA repository interfaces.
+2023-08-14 12:00:20 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 12:00:20 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 12:00:20 - Starting service [Tomcat]
+2023-08-14 12:00:20 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 12:00:20 - Initializing Spring embedded WebApplicationContext
+2023-08-14 12:00:20 - Root WebApplicationContext: initialization completed in 1939 ms
+2023-08-14 12:00:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 12:00:20 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 12:00:20 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 12:00:20 - HikariPool-1 - Starting...
+2023-08-14 12:00:21 - HikariPool-1 - Start completed.
+2023-08-14 12:00:21 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 12:00:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 12:00:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 12:00:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 12:00:23 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@556b7120, org.springframework.security.web.context.SecurityContextPersistenceFilter@68a9d380, org.springframework.security.web.header.HeaderWriterFilter@4c0dce83, org.springframework.web.filter.CorsFilter@272bfb30, org.springframework.security.web.authentication.logout.LogoutFilter@56d2bc99, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@1c8e07cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@379bf167, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76a53b88, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fcd16b, org.springframework.security.web.session.SessionManagementFilter@69f972e0, org.springframework.security.web.access.ExceptionTranslationFilter@7b593df2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@aae3418]
+2023-08-14 12:00:23 - LiveReload server is running on port 35729
+2023-08-14 12:00:23 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 12:00:23 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 12:00:24 - Getting Admin Role using name => Super Admin
+2023-08-14 12:00:24 - Started DocMgtApplication in 5.974 seconds (JVM running for 6.882)
+2023-08-14 12:00:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-14 12:00:52 - Initializing Servlet 'dispatcherServlet'
+2023-08-14 12:00:52 - Completed initialization in 2 ms
+2023-08-14 12:00:52 - Request to validate token
+2023-08-14 12:00:52 - Getting the user matt from the db
+2023-08-14 12:00:52 - Request to validate token
+2023-08-14 12:00:52 - Getting the user matt from the db
+2023-08-14 12:00:58 - Request to approve document uploadTempPerformActionDTO(reason=okay, status=APPROVED), by matt
+2023-08-14 12:01:12 - Performing Temp action on document id => 1 with status => APPROVED
+2023-08-14 12:01:23 - Validating that user => matt exist in db 
+2023-08-14 12:03:22 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s474ms272µs).
+2023-08-14 12:03:23 - Performing approved action
+2023-08-14 12:05:57 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m35s496ms608µs400ns).
+2023-08-14 12:05:57 - Updating temp record with id => 1, status => APPROVED and reason => okay
+2023-08-14 12:05:57 - ResponseCode => 0, message => Successful and data => TempResponseDTO(result=APPROVED Successfully)
+2023-08-14 12:05:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 12:05:57 - HikariPool-1 - Shutdown initiated...
+2023-08-14 12:05:57 - HikariPool-1 - Shutdown completed.
+2023-08-14 12:06:02 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-14 12:06:03 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 31224 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-14 12:06:03 - The following profiles are active: local
+2023-08-14 12:06:03 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 12:06:03 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 12:06:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-14 12:06:04 - Finished Spring Data repository scanning in 134 ms. Found 6 JPA repository interfaces.
+2023-08-14 12:06:04 - Tomcat initialized with port(s): 8085 (http)
+2023-08-14 12:06:04 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-14 12:06:04 - Starting service [Tomcat]
+2023-08-14 12:06:04 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-14 12:06:04 - Initializing Spring embedded WebApplicationContext
+2023-08-14 12:06:04 - Root WebApplicationContext: initialization completed in 1856 ms
+2023-08-14 12:06:05 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-14 12:06:05 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-14 12:06:05 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-14 12:06:05 - HikariPool-1 - Starting...
+2023-08-14 12:06:05 - HikariPool-1 - Start completed.
+2023-08-14 12:06:05 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-08-14 12:06:06 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-14 12:06:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-14 12:06:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-14 12:06:07 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@123b429f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b795a55, org.springframework.security.web.header.HeaderWriterFilter@6bc5e068, org.springframework.web.filter.CorsFilter@2bb97307, org.springframework.security.web.authentication.logout.LogoutFilter@3e5677b4, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@4c31e92d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ad97d58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d528a97, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@353ae9cc, org.springframework.security.web.session.SessionManagementFilter@706378d7, org.springframework.security.web.access.ExceptionTranslationFilter@2c9cbcbf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3df0ce42]
+2023-08-14 12:06:07 - LiveReload server is running on port 35729
+2023-08-14 12:06:07 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-14 12:06:07 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-14 12:06:08 - Getting Admin Role using name => Super Admin
+2023-08-14 12:06:08 - Started DocMgtApplication in 5.403 seconds (JVM running for 6.209)
+2023-08-14 12:06:16 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-14 12:06:16 - Initializing Servlet 'dispatcherServlet'
+2023-08-14 12:06:16 - Completed initialization in 1 ms
+2023-08-14 12:06:16 - Request to validate token
+2023-08-14 12:06:16 - Getting the user matt from the db
+2023-08-14 12:06:16 - Request to validate token
+2023-08-14 12:06:16 - Getting the user matt from the db
+2023-08-14 12:06:16 - Request to approve document uploadTempPerformActionDTO(reason=okay, status=APPROVED), by matt
+2023-08-14 12:06:16 - Performing Temp action on document id => 1 with status => APPROVED
+2023-08-14 12:06:16 - Validating that user => matt exist in db 
+2023-08-14 12:06:16 - Performing approved action
+2023-08-14 12:06:16 - Updating document with id => 1, status => APPROVED and reason => okay
+2023-08-14 12:06:16 - ResponseCode => 0, message => Successful and data => TempResponseDTO(result=APPROVED Successfully)
+2023-08-14 14:47:14 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m6s174ms689µs800ns).
+2023-08-14 16:23:57 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s206ms588µs600ns).
+2023-08-14 17:41:49 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m50s707ms839µs200ns).
+2023-08-14 19:49:35 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58m48s337ms430µs900ns).
+2023-08-14 20:34:37 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m32s618ms949µs600ns).

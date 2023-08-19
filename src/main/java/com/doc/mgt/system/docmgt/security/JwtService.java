@@ -18,13 +18,10 @@ import java.util.Date;
 
 @Service
 @Slf4j
-public class JwtTokenProvider {
+public class JwtService {
 
     @Value("${security.jwt.token.secret-key:secret-key}")
     private String secretKey;
-
-    @Value("${security.jwt.token.expire-length}")
-    private long validityInMilliseconds;
 
     @PostConstruct
     protected void init() {
@@ -40,7 +37,7 @@ public class JwtTokenProvider {
 
         //set validity
         Date now = new Date();
-        Date validity = new Date(now.getTime() + validityInMilliseconds);
+        Date validity = new Date(System.currentTimeMillis() + 1000 * 60 * 24); // Set the expiration date (24 hours from now)
 
         //sign jwt
         return Jwts.builder()
@@ -56,7 +53,7 @@ public class JwtTokenProvider {
         return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().getSubject();
     }
 
-    public String resolveToken(HttpServletRequest req) {
+    public String extractToken(HttpServletRequest req) {
         //extract token from authorization header
         String bearerToken = req.getHeader("Authorization");
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {

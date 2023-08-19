@@ -9,11 +9,14 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 
+import java.security.Principal;
 import java.util.Collections;
 import java.util.List;
 
 @Configuration
 public class SwaggerConfig {
+
+    private  Principal principal;
 
     @Bean
     public Docket api() {
@@ -53,5 +56,10 @@ public class SwaggerConfig {
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
         return Collections.singletonList(new SecurityReference("JWT", authorizationScopes));
+    }
+
+    @Bean
+    public Principal principal() {
+        return () -> principal().getName(); // Return a default principal
     }
 }

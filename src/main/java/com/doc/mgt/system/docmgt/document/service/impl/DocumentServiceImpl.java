@@ -14,8 +14,7 @@ import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import com.doc.mgt.system.docmgt.image.service.ImageService;
-import com.doc.mgt.system.docmgt.user.model.AdminUser;
-import com.doc.mgt.system.docmgt.user.service.UserService;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import com.doc.mgt.system.docmgt.util.GeneralUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -23,6 +22,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -35,23 +36,20 @@ public class DocumentServiceImpl implements DocumentService {
 
     private final DocumentTypeRepository documentTypeRepository;
 
-    private final UserService userService;
-
     private final GeneralService generalService;
 
     private final ImageService imageService;
 
-    public DocumentServiceImpl(DocumentRepository documentRepository, DocumentTypeRepository documentTypeRepository, UserService userService, GeneralService generalService, ImageService imageService) {
+    public DocumentServiceImpl(DocumentRepository documentRepository, DocumentTypeRepository documentTypeRepository, GeneralService generalService, ImageService imageService) {
         this.documentRepository = documentRepository;
         this.documentTypeRepository = documentTypeRepository;
-        this.userService = userService;
         this.generalService = generalService;
         this.imageService = imageService;
     }
 
     @Override
-    public DocumentDTO uploadDocument(UploadDocumentDTO request, String username) {
-        log.info("Request to upload document {}", request.getFileName());
+    public DocumentDTO saveDocument(UploadDocumentDTO request, String username, Map<String, String> result ) {
+        log.info("Request to save uploaded document {} bu user {}", request.getFileName(), username);
 
         // check null values
         if (GeneralUtil.stringIsNullOrEmpty(request.getFileName())) {
@@ -76,16 +74,17 @@ public class DocumentServiceImpl implements DocumentService {
             throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseMessage, "DocumentType cannot be null");
         }
 
-        // get user
-        AdminUser user = userService.getUserForLogin(username);
+        //
+        String fieldId = result.get("fileId");
+        String url = result.get("url");
 
         Document document = new Document();
         document.setType(documentType.get());
         document.setName(request.getFileName());
-        document.setAdminUser(user);
+        document.setUrl(url);
+        document.setFileId(fieldId);
 
-        // upload document
-        migrateTempDocument(document, request.getBase64Image());
+        document.setCreatedBy(username);
 
         document = documentRepository.save(document);
 
@@ -104,17 +103,32 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public DocumentListDTO getAllDocuments(PageableRequestDTO requestDTO) {
-        log.info("Getting Document List ");
+        log.info("Getting Document List with {}", requestDTO);
 
         Pageable paged = generalService.getPageableObject(requestDTO.getSize(), requestDTO.getPage());
-        Page<Document> billerPage = documentRepository.findAll(paged);
+        Page<Document> documentPage = documentRepository.findAll(paged);
 
-        return getDocumentListDTO(billerPage);
+        return getDocumentListDTO(documentPage);
     }
 
-    private Document getDocumentById(Long id) {
+    @Override
+    public Document getDocumentById(Long id) {
         return documentRepository.findById(id)
                 .orElseThrow(() -> new GeneralException(ResponseCodeAndMessage.DOCUMENT_NOT_FOUND_89));
+    }
+
+    @Override
+    public DocumentListDTO getDocumentListByStatus(TempStatus status, PageableRequestDTO requestDTO, String username) {
+        log.info("Request to get all documents with status {}, by {}", status, username);
+
+        if (Objects.isNull(status)) {
+            throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Status cannot be empty");
+        }
+
+        Pageable paged = generalService.getPageableObject(requestDTO.getSize(), requestDTO.getPage());
+        Page<Document> documentPage = documentRepository.findAllByStatus(status, paged);
+
+        return getDocumentListDTO(documentPage);
     }
 
     private void migrateTempDocument(Document document, String image) {

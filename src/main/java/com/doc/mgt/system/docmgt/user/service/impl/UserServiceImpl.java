@@ -8,7 +8,10 @@ import com.doc.mgt.system.docmgt.role.dto.RoleDTO;
 import com.doc.mgt.system.docmgt.role.model.Role;
 import com.doc.mgt.system.docmgt.role.repository.AdminRoleRepository;
 import com.doc.mgt.system.docmgt.role.service.AdminRoleService;
-import com.doc.mgt.system.docmgt.security.JwtTokenProvider;
+import com.doc.mgt.system.docmgt.security.JwtService;
+import com.doc.mgt.system.docmgt.token.Token;
+import com.doc.mgt.system.docmgt.token.TokenRepository;
+import com.doc.mgt.system.docmgt.token.TokenType;
 import com.doc.mgt.system.docmgt.user.dto.*;
 import com.doc.mgt.system.docmgt.user.imodel.UserBasicInfoI;
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
@@ -38,10 +41,16 @@ import java.util.stream.Collectors;
 @Slf4j
 public class UserServiceImpl implements UserService {
 
+    //    private final HttpServletRequest request;
+//    private final HttpServletResponse response;
+//    private final Authentication authentication;
+//
+//    private final LogoutService logoutService;
+    private final TokenRepository tokenRepository;
     private final AdminRoleRepository adminRoleRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtTokenProvider jwtTokenProvider;
+    private final JwtService jwtService;
     private final GeneralService generalService;
     private final AuthenticationManager authenticationManager;
 
@@ -60,10 +69,18 @@ public class UserServiceImpl implements UserService {
             //if successful, set authentication object in the security context
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            Role userRole = userRepository.findByUsername(username).getUserRole();
+            AdminUser user = userRepository.findByUsername(username);
+
+            Role userRole = user.getUserRole();
 
             //generate jwt token
-            String token = jwtTokenProvider.generateToken(username, userRole);
+            String token = jwtService.generateToken(username, userRole);
+
+//            // revoke user token
+//            revokeUserTokens(username);
+//
+//            // save the user token
+//            saveUserToken(user, token);
 
             Response response = new Response();
             response.setResponseCode(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode);
@@ -111,10 +128,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AdminUser getUserForLogin(String email) {
-        log.info("Validating that user => {} exist in db ", email);
+    public AdminUser getUserByUsername(String username) {
+        log.info("Validating that user => {} exist in db ", username);
 
-        AdminUser user = adminUserRepository.findByEmail(email);
+        AdminUser user = adminUserRepository.findByUsername(username);
         if (Objects.isNull(user)) {
             throw new GeneralException(ResponseCodeAndMessage.RECORD_NOT_FOUND_88);
         }
@@ -122,16 +139,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void logoutUser(String email) {
-        log.info("Logging out User using Email => {}", email);
+    public String getLoggedInUser() {
+        log.info("Getting logged in user");
 
-        // call auth service to log out
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return authentication.getName();
 
     }
 
     @Override
     public AdminUserDTO addUser(CreateUpdateUserDTO createUserDto, String performedBy) {
-        log.info("creating a user with payload = {}", createUserDto);
+        log.info("creating a user with payload {} by user {}", createUserDto, performedBy);
 
         //validate first name, last name and phone number
         GeneralUtil.validateUsernameAndEmail(createUserDto.getUsername(), createUserDto.getEmail());
@@ -145,7 +163,6 @@ public class UserServiceImpl implements UserService {
         //get the role
         Role role = getRole(createUserDto.getRoleId());
 
-        //save user
 
         //create new user
         AdminUser adminUser = new AdminUser();
@@ -167,7 +184,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AdminUserDTO updateUser(CreateUpdateUserDTO createAdminUserDto, Long adminUserId, String performedBy) {
-        log.info("Request to update an admin user with admin user id = {} with payload = {}", adminUserId, createAdminUserDto);
+        log.info("Request to update a user with user id {} with payload {} by user {}", adminUserId, createAdminUserDto, performedBy);
 
         AdminUser adminUser = getAdminUserById(adminUserId);
         Role role = adminUser.getUserRole();
@@ -179,7 +196,7 @@ public class UserServiceImpl implements UserService {
 
         // check that user cannot modify itself
         if (Objects.equals(adminUser.getEmail(), performedBy)) {
-            throw new GeneralException(ResponseCodeAndMessage.OPERATION_NOT_SUPPORTED_93.responseMessage, "Logged in Admin user cannot modify itself!");
+            throw new GeneralException(ResponseCodeAndMessage.OPERATION_NOT_SUPPORTED_93.responseMessage, "Logged in user cannot modify itself!");
         }
 
         adminUser.setUserRole(role);
@@ -235,22 +252,33 @@ public class UserServiceImpl implements UserService {
         return adminUserListDTO;
     }
 
+
     @Override
-    public boolean signOut(String email) {
-        AdminUser adminUser = getUserForLogin(email);
-        logoutUser(email);
-        return true;
+    public void revokeUserTokens(String username) {
+        log.info("Request to revoke the token for user {}", username);
+
+        List<Token> validUserToken = tokenRepository.findAllByUser_Username(username);
+        if (Objects.isNull(validUserToken))
+            return;
+        validUserToken.forEach(token -> {
+            token.setExpired(true);
+            token.setRevoked(true);
+        });
+        tokenRepository.saveAll(validUserToken);
     }
 
-//    public String logout(HttpServletRequest request, HttpServletResponse response) {
-//
-//        // Perform any additional cleanup or custom actions here
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        if (auth != null) {
-//            new SecurityContextLogoutHandler().logout(request, response, auth);
-//        }
-//        return "redirect:/login?logout";
-//    }
+    private void saveUserToken(AdminUser user, String jwtToken) {
+        log.info("Request to save token for user {}", user.getUsername());
+
+        Token token = Token.builder()
+                .user(user)
+                .token(jwtToken)
+                .tokenType(TokenType.BEARER)
+                .expired(false)
+                .revoked(false)
+                .build();
+        tokenRepository.save(token);
+    }
 
     private List<AdminUserDTO> convertToAdminUserDTOList(List<AdminUser> adminUserList) {
         log.info("Converting Admin User List to Admin User DTO List");
@@ -259,11 +287,6 @@ public class UserServiceImpl implements UserService {
     }
 
     private void validateEmail(String email) {
-
-//        if (GeneralUtil.invalidEmail(email)) {
-//            log.info("Admin User email {} is invalid", email);
-//            throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Admin User Email " + email + " is invalid!");
-//        }
 
         if (adminUserRepository.existsByEmail(email)) {
             throw new GeneralException(ResponseCodeAndMessage.ALREADY_EXIST_86.responseCode, "Email already exist");

@@ -25,7 +25,7 @@ import java.io.IOException;
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     @Autowired
-    private JwtTokenProvider jwtTokenProvider;
+    private JwtService jwtService;
 
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
@@ -36,14 +36,14 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
             @NotNull HttpServletResponse httpServletResponse,
             @NotNull FilterChain filterChain) throws ServletException, IOException {
         //remove "bearer" and get jwt token
-        String token = jwtTokenProvider.resolveToken(httpServletRequest);
+        String token = jwtService.extractToken(httpServletRequest);
 
         try {
 
             // Validate the token
-            if (token != null && jwtTokenProvider.validateToken(token)) {
+            if (token != null && jwtService.validateToken(token)) {
                 // If the token is valid, set the authentication in the SecurityContext
-                String username = jwtTokenProvider.getUsername(token);
+                String username = jwtService.getUsername(token);
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
                 Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());

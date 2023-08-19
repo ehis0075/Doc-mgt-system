@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.document.controller;
 
+import com.doc.mgt.system.docmgt.document.dto.DocumentDTO;
 import com.doc.mgt.system.docmgt.document.dto.DocumentListDTO;
 import com.doc.mgt.system.docmgt.document.dto.UploadDocumentDTO;
 import com.doc.mgt.system.docmgt.document.service.DocumentService;
@@ -7,18 +8,11 @@ import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
-import com.doc.mgt.system.docmgt.tempStorage.dto.TempResponseDTO;
-import com.doc.mgt.system.docmgt.tempStorage.enums.TableName;
-import com.doc.mgt.system.docmgt.tempStorage.enums.TempAction;
-import com.doc.mgt.system.docmgt.tempStorage.service.TempService;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
+import com.doc.mgt.system.docmgt.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.Map;
 import java.util.Objects;
 
@@ -28,51 +22,56 @@ import java.util.Objects;
 @RequestMapping("/api/v1/documents")
 public class DocumentController {
 
-    private final TempService tempService;
     private final DocumentService documentService;
     private final GeneralService generalService;
 
-    public DocumentController(TempService tempService, DocumentService documentService, GeneralService generalService) {
-        this.tempService = tempService;
+    private final UserService userService;
+
+    public DocumentController(DocumentService documentService, GeneralService generalService, UserService userService) {
         this.documentService = documentService;
         this.generalService = generalService;
+        this.userService = userService;
     }
 
-//    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
+    //    @PreAuthorize("hasAuthority('UPLOAD_DOCUMENT')")
     @PostMapping("/create")
-    public Response create(@RequestBody UploadDocumentDTO request, Principal principal) {
+    public Response create(@RequestBody UploadDocumentDTO request) {
 
-        String user = principal.getName();
+        String user = userService.getLoggedInUser();
 
-        log.info("request to create upload a doc with payload ----> {}, by {}", request.getDocumentTypId(), user);
-        String fileId = uploadDocToTemp(request);
+        log.info("request to upload a document of type {} and file name {}, by {}", request.getDocumentTypId(), request.getFileName(), user);
+        Map<String, String> result = uploadDocument(request);
 
-        TempResponseDTO data = tempService.saveToTemp(request, null, TempAction.CREATE, TableName.DOCUMENT, documentService, user, fileId);
+        DocumentDTO data = documentService.saveDocument(request, user, result);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
 
     }
 
-//    @PreAuthorize("hasAuthority('VIEW_DOCUMENT')")
+    //    @PreAuthorize("hasAuthority('VIEW_DOCUMENT')")
     @PostMapping()
-    public Response getAllDocuments(@RequestBody PageableRequestDTO request, Principal principal) {
+    public Response getAllDocuments(@RequestBody PageableRequestDTO request) {
 
-        String user = principal.getName();
         DocumentListDTO data = documentService.getAllDocuments(request);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
 
     }
 
-    private String uploadDocToTemp(UploadDocumentDTO request) {
+    @PostMapping("getAll/{status}")
+    public Response getDocumentListByStatus(@RequestBody PageableRequestDTO request, @PathVariable TempStatus status) {
+
+        String user = userService.getLoggedInUser();
+
+        DocumentListDTO data = documentService.getDocumentListByStatus(status, request, user);
+        return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, data);
+
+    }
+
+    private Map<String, String> uploadDocument(UploadDocumentDTO request) {
         Map<String, String> fileIdAndImage = generalService.uploadImageToTemp(request.getBase64Image(), request.getFileName());
         if (Objects.nonNull(fileIdAndImage)) {
-            log.info("uploading document to temp");
+            log.info("uploading document");
 
-            String fieldId = fileIdAndImage.get("fileId");
-            String url = fileIdAndImage.get("url");
-
-            request.setBase64Image(url);
-
-            return fieldId;
+            return fileIdAndImage;
         } else {
             if (Objects.nonNull(request.getBase64Image()) && request.getBase64Image().length() > 200) {
                 request.setBase64Image(null);

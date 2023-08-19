@@ -12,7 +12,7 @@ import java.util.List;
 
 public interface DocumentTypeService {
 
-    DocumentTypeDTO save(CreateDocumentTypeDTO request);
+    DocumentTypeDTO save(CreateDocumentTypeDTO request, String user);
 
     DocumentTypeListDTO getAll(PageableRequestDTO requestDTO);
 }

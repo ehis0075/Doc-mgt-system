@@ -31,8 +31,8 @@ public class DocumentTypeServiceImpl implements DocumentTypeService {
     }
 
     @Override
-    public DocumentTypeDTO save(CreateDocumentTypeDTO request) {
-        log.info("Request to save Document Type with request {}", request);
+    public DocumentTypeDTO save(CreateDocumentTypeDTO request, String user) {
+        log.info("Request to save Document Type with request {} by user {}", request, user);
 
         DocumentType documentType = new DocumentType();
         documentType.setType(request.getType());
