@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk-1.8
+      java: openjdk:8-jdk-alpine
     commands:
       - echo "Installing dependencies..."
       - sudo apt-get update && apt-get install -y maven
