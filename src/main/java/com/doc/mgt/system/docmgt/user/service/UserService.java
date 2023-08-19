@@ -5,6 +5,8 @@ import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.user.dto.*;
 import com.doc.mgt.system.docmgt.user.model.AdminUser;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface UserService {
     Response signIn(String username, String password);
 
@@ -13,6 +15,7 @@ public interface UserService {
     AdminUser getUserForLogin(String email);
 
     void logoutUser(String email);
+    void logOut(HttpServletRequest request);
 
     AdminUserDTO addUser(CreateUpdateUserDTO createAdminUserDto, String performedBy);
 

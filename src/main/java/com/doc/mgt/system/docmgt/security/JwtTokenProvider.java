@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.security;
 
+import com.doc.mgt.system.docmgt.auth_token.AuthTokenService;
 import com.doc.mgt.system.docmgt.exception.GeneralException;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.role.model.Role;
@@ -7,6 +8,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ import java.util.Date;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class JwtTokenProvider {
 
     @Value("${security.jwt.token.secret-key:secret-key}")
@@ -25,6 +28,7 @@ public class JwtTokenProvider {
 
     @Value("${security.jwt.token.expire-length}")
     private long validityInMilliseconds;
+    private final AuthTokenService authTokenService;
 
     @PostConstruct
     protected void init() {
@@ -65,7 +69,15 @@ public class JwtTokenProvider {
         return null;
     }
 
+    //double validation
+    //check with jwt for the authenticity of the token
+    //check with us if the token is not revoked
     public boolean validateToken(String token) {
+        return validateJwtToken(token)
+                && authTokenService.validateToken(token);
+    }
+
+    private boolean validateJwtToken(String token) {
         log.info("Request to validate token");
 
         try {

@@ -1,5 +1,7 @@
 package com.doc.mgt.system.docmgt.user.service.impl;
 
+import com.doc.mgt.system.docmgt.auth_token.AuthToken;
+import com.doc.mgt.system.docmgt.auth_token.AuthTokenService;
 import com.doc.mgt.system.docmgt.exception.GeneralException;
 import com.doc.mgt.system.docmgt.general.dto.Response;
 import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
@@ -27,6 +29,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -44,6 +47,7 @@ public class UserServiceImpl implements UserService {
     private final JwtTokenProvider jwtTokenProvider;
     private final GeneralService generalService;
     private final AuthenticationManager authenticationManager;
+    private final AuthTokenService authTokenService;
 
     private final AdminRoleService adminRoleService;
     private final UserRepository adminUserRepository;
@@ -64,6 +68,8 @@ public class UserServiceImpl implements UserService {
 
             //generate jwt token
             String token = jwtTokenProvider.generateToken(username, userRole);
+            saveToken(username, token);
+
 
             Response response = new Response();
             response.setResponseCode(ResponseCodeAndMessage.SUCCESSFUL_0.responseCode);
@@ -78,6 +84,15 @@ public class UserServiceImpl implements UserService {
             log.info("Incorrect User credentials");
             throw new GeneralException(ResponseCodeAndMessage.AUTHENTICATION_FAILED_95);
         }
+    }
+
+    private void saveToken(String username, String token) {
+        AuthToken authToken = AuthToken.builder()
+                .accessToken(token)
+                .revoked(false)
+                .user(userRepository.findByUsername(username))
+                .build();
+        authTokenService.saveToken(authToken);
     }
 
     @Override
@@ -124,11 +139,23 @@ public class UserServiceImpl implements UserService {
     @Override
     public void logoutUser(String email) {
         log.info("Logging out User using Email => {}", email);
-
         // call auth service to log out
-
     }
-
+    @Override
+    public void logOut(HttpServletRequest request) {
+        log.info("Request to log user out");
+        //extract jwt token from request header
+        final String jwtToken = jwtTokenProvider.resolveToken(request);
+        //check for jwt token validation
+        if (jwtTokenProvider.validateToken(jwtToken)) {
+            String userName = jwtTokenProvider.getUsername(jwtToken);
+            //revoke the access token
+            authTokenService.revokeToken(jwtToken);
+            //clear the security context
+            SecurityContextHolder.clearContext();
+            log.info("Successfully logged user: {} out", userName);
+        }
+    }
     @Override
     public AdminUserDTO addUser(CreateUpdateUserDTO createUserDto, String performedBy) {
         log.info("creating a user with payload = {}", createUserDto);
