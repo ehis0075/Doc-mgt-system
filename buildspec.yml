@@ -6,7 +6,7 @@ phases:
       java: corretto8
     commands:
       - echo "Installing dependencies..."
-      - sudo apt update && apt install -y maven
+      - sudo apt install openjdk-1.8-jdk
 
   build:
     commands:
