@@ -6,7 +6,7 @@ phases:
       java: corretto8
     commands:
       - echo "Installing dependencies..."
-      - sudo apt install openjdk-1.8-jdk
+#      - sudo apt install openjdk-1.8-jdk
 
   build:
     commands:
