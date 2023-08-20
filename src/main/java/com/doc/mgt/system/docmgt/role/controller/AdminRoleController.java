@@ -12,8 +12,6 @@ import com.doc.mgt.system.docmgt.role.service.AdminRoleService;
 import com.doc.mgt.system.docmgt.user.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
-
 @RestController
 @RequestMapping("/api/v1/adminRoles")
 public class AdminRoleController {
@@ -50,23 +48,14 @@ public class AdminRoleController {
 
     //    @PreAuthorize("hasAuthority('DELETE_ROLE')")
     @PostMapping("/delete/{id}")
-    public Response deleteRole(@PathVariable Long id, Principal principal) {
+    public Response deleteRole(@PathVariable Long id) {
 
-        String user = principal.getName();
+        String user = userService.getLoggedInUser();
 
         adminRoleService.deleteRole(id, user);
         return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, null);
     }
 
-    //    @PreAuthorize("hasAuthority('DELETE_ROLE')")
-    @PostMapping("/delete/{RoleName}")
-    public Response deleteRoleByName(@PathVariable String RoleName) {
-
-        String user = userService.getLoggedInUser();
-
-        adminRoleService.deleteRoleByName(RoleName, user);
-        return generalService.prepareResponse(ResponseCodeAndMessage.SUCCESSFUL_0, null);
-    }
 
     //    @PreAuthorize("hasAuthority('VIEW_ROLE')")
     @PostMapping()

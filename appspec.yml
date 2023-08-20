@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/Doc-mgt-system
+    destination: /home/ubuntu
 
-#hooks:
-#  ApplicationStart:
-#    - location: scripts/start_application.sh
-#      timeout: 300
+hooks:
+  ApplicationStart:
+    - location: /home/ubuntu/start_application.sh
+      timeout: 300

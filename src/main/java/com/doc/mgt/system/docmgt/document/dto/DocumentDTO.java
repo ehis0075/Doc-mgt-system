@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class DocumentDTO {
 
+    private Long id;
+
     private String name;
 
     private CreateDocumentTypeDTO type;

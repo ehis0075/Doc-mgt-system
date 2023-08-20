@@ -108,7 +108,7 @@ public class AdminRoleServiceImpl implements AdminRoleService {
         }
 
         // check that permissionNames is not null
-        if(!arePermissionNamesValid(requestDTO.getPermissionNames())){
+        if (!arePermissionNamesValid(requestDTO.getPermissionNames())) {
             throw new GeneralException(ResponseCodeAndMessage.INCOMPLETE_PARAMETERS_91.responseCode, "Permission Names cannot be null or empty!");
         }
 

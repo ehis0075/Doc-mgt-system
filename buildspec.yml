@@ -17,5 +17,6 @@ artifacts:
   files:
     - target/*.jar
     - appspec.yml
+    - start_application.sh
   discard_paths: yes
   name: dms-service
