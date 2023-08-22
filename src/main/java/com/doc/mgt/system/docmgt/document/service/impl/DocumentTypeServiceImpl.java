@@ -73,6 +73,7 @@ public class DocumentTypeServiceImpl implements DocumentTypeService {
     public DocumentTypeDTO getDocumentTypeDTO(DocumentType documentType) {
 
         DocumentTypeDTO dto = new DocumentTypeDTO();
+        dto.setId(documentType.getId());
         dto.setType(documentType.getType());
 
         return dto;

@@ -3,6 +3,7 @@ package com.doc.mgt.system.docmgt.document.controller;
 import com.doc.mgt.system.docmgt.document.dto.DocumentDTO;
 import com.doc.mgt.system.docmgt.document.dto.DocumentListDTO;
 import com.doc.mgt.system.docmgt.document.dto.UploadDocumentDTO;
+import com.doc.mgt.system.docmgt.document.model.Document;
 import com.doc.mgt.system.docmgt.document.service.DocumentService;
 import com.doc.mgt.system.docmgt.general.dto.PageableRequestDTO;
 import com.doc.mgt.system.docmgt.general.dto.Response;

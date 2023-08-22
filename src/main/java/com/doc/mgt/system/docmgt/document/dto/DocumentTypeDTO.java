@@ -5,5 +5,7 @@ import lombok.Data;
 
 @Data
 public class DocumentTypeDTO {
+
+    private Long id;
     private String type;
 }

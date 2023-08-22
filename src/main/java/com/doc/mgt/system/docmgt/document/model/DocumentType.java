@@ -1,6 +1,7 @@
 package com.doc.mgt.system.docmgt.document.model;
 
 import com.doc.mgt.system.docmgt.document.dto.CreateDocumentTypeDTO;
+import com.doc.mgt.system.docmgt.document.dto.DocumentTypeDTO;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
@@ -17,10 +18,10 @@ public class DocumentType {
     @Column(unique = true)
     private String type;
 
-    public static CreateDocumentTypeDTO getDocumentTypeDTO(DocumentType documentType) {
-        CreateDocumentTypeDTO createDocumentTypeDTO = new CreateDocumentTypeDTO();
-        BeanUtils.copyProperties(documentType, createDocumentTypeDTO);
-        return createDocumentTypeDTO;
+    public static DocumentTypeDTO getDocumentTypeDTO(DocumentType documentType) {
+        DocumentTypeDTO documentTypeDTO = new DocumentTypeDTO();
+        BeanUtils.copyProperties(documentType, documentTypeDTO);
+        return documentTypeDTO;
     }
 
 }

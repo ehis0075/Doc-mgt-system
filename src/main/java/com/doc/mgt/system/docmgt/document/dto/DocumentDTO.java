@@ -1,5 +1,7 @@
 package com.doc.mgt.system.docmgt.document.dto;
 
+import com.doc.mgt.system.docmgt.document.model.DocumentType;
+import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import lombok.Data;
 
 
@@ -10,11 +12,15 @@ public class DocumentDTO {
 
     private String name;
 
-    private CreateDocumentTypeDTO type;
+    private DocumentTypeDTO type;
+
+    private String url;
 
     private String fileId;
 
-    private String url;
+    private boolean isApproved;
+
+    private TempStatus status;
 
     private String createdBy;
 

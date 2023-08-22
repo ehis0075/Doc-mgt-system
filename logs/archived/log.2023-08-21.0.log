@@ -1,0 +1,386 @@
+2023-08-21 08:34:55 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 13612 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 08:34:55 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-21 08:34:55 - The following profiles are active: test
+2023-08-21 08:34:55 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-21 08:34:55 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-21 08:34:56 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 08:34:56 - Finished Spring Data repository scanning in 118 ms. Found 6 JPA repository interfaces.
+2023-08-21 08:34:57 - Tomcat initialized with port(s): 8085 (http)
+2023-08-21 08:34:57 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:34:57 - Starting service [Tomcat]
+2023-08-21 08:34:57 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-21 08:34:57 - Initializing Spring embedded WebApplicationContext
+2023-08-21 08:34:57 - Root WebApplicationContext: initialization completed in 1923 ms
+2023-08-21 08:34:57 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 08:34:57 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-21 08:34:57 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-21 08:34:57 - HikariPool-1 - Starting...
+2023-08-21 08:34:57 - HikariPool-1 - Start completed.
+2023-08-21 08:34:57 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 08:34:58 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 08:34:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:34:59 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 08:34:59 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38eb53b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@7461c84c, org.springframework.security.web.header.HeaderWriterFilter@1e578b9c, org.springframework.web.filter.CorsFilter@16b7b114, org.springframework.security.web.authentication.logout.LogoutFilter@7a372899, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@4c0d0055, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70ca8d61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ad97ffe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74e1da9, org.springframework.security.web.session.SessionManagementFilter@5b13efc1, org.springframework.security.web.access.ExceptionTranslationFilter@433dfc3f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e921ca1]
+2023-08-21 08:34:59 - LiveReload server is running on port 35729
+2023-08-21 08:35:00 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:35:00 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-21 08:35:00 - Getting Admin Role using name => Super Admin
+2023-08-21 08:35:00 - Started DocMgtApplication in 5.849 seconds (JVM running for 6.706)
+2023-08-21 08:36:16 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:16 - HikariPool-1 - Shutdown initiated...
+2023-08-21 08:36:16 - HikariPool-1 - Shutdown completed.
+2023-08-21 08:36:16 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 13612 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 08:36:16 - The following profiles are active: test
+2023-08-21 08:36:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 08:36:16 - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2023-08-21 08:36:16 - Tomcat initialized with port(s): 8085 (http)
+2023-08-21 08:36:16 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:36:16 - Starting service [Tomcat]
+2023-08-21 08:36:16 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-21 08:36:16 - Initializing Spring embedded WebApplicationContext
+2023-08-21 08:36:16 - Root WebApplicationContext: initialization completed in 339 ms
+2023-08-21 08:36:16 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 08:36:16 - HikariPool-2 - Starting...
+2023-08-21 08:36:16 - HikariPool-2 - Start completed.
+2023-08-21 08:36:16 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 08:36:16 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 08:36:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 08:36:16 - LiveReload server is running on port 35729
+2023-08-21 08:36:16 - 
+
+Using generated security password: ead0f9f0-3fdd-432d-a907-41aa829f41e8
+
+2023-08-21 08:36:16 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a39ba80, org.springframework.security.web.context.SecurityContextPersistenceFilter@e2f37e8, org.springframework.security.web.header.HeaderWriterFilter@79d1b1fc, org.springframework.security.web.csrf.CsrfFilter@6ce0d2a6, org.springframework.security.web.authentication.logout.LogoutFilter@4238438, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d1d3742, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2dab48af, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1361682e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2735db63, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38b1e4c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9bfc7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11890e1b, org.springframework.security.web.session.SessionManagementFilter@64b0ac3a, org.springframework.security.web.access.ExceptionTranslationFilter@547c5a86, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c1d688a]
+2023-08-21 08:36:17 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:36:17 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-21 08:36:17 - Started DocMgtApplication in 0.75 seconds (JVM running for 82.972)
+2023-08-21 08:36:17 - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-08-21 08:36:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:20 - HikariPool-2 - Shutdown initiated...
+2023-08-21 08:36:20 - HikariPool-2 - Shutdown completed.
+2023-08-21 08:36:20 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 13612 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 08:36:20 - The following profiles are active: test
+2023-08-21 08:36:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 08:36:21 - Finished Spring Data repository scanning in 77 ms. Found 6 JPA repository interfaces.
+2023-08-21 08:36:21 - Tomcat initialized with port(s): 8085 (http)
+2023-08-21 08:36:21 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:36:21 - Starting service [Tomcat]
+2023-08-21 08:36:21 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-21 08:36:21 - Initializing Spring embedded WebApplicationContext
+2023-08-21 08:36:21 - Root WebApplicationContext: initialization completed in 555 ms
+2023-08-21 08:36:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 08:36:21 - HikariPool-3 - Starting...
+2023-08-21 08:36:21 - HikariPool-3 - Start completed.
+2023-08-21 08:36:21 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 08:36:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 08:36:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 08:36:22 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14ade0ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e589e7f, org.springframework.security.web.header.HeaderWriterFilter@fa5c226, org.springframework.web.filter.CorsFilter@6abaa6ae, org.springframework.security.web.authentication.logout.LogoutFilter@74c67c6, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@3a7393a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31a831ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10bd610b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e1a66c, org.springframework.security.web.session.SessionManagementFilter@7f5243fb, org.springframework.security.web.access.ExceptionTranslationFilter@13839f89, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a1e6c25]
+2023-08-21 08:36:22 - LiveReload server is running on port 35729
+2023-08-21 08:36:22 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-21 08:36:22 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-21 08:36:22 - Getting Admin Role using name => Super Admin
+2023-08-21 08:36:22 - Started DocMgtApplication in 1.969 seconds (JVM running for 88.477)
+2023-08-21 08:36:22 - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsServiceImpl and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-08-21 08:36:23 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests], using SpringBootContextLoader
+2023-08-21 08:36:23 - Could not detect default resource locations for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-08-21 08:36:23 - Could not detect default configuration classes for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: DocMgtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-08-21 08:36:23 - Found @SpringBootConfiguration com.doc.mgt.system.docmgt.DocMgtApplication for test class com.doc.mgt.system.docmgt.DocMgtApplicationTests
+2023-08-21 08:36:23 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-08-21 08:36:23 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c530d1e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c25e6c4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@85e6769, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c5ee75e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48a12036, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bf1ec20, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70efb718, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b70da4c, org.springframework.test.context.event.EventPublishingTestExecutionListener@4a11eb84, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4e858e0a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@435fb7b5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e70a728, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@b7838a9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@696f0212, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5733f295, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3146bc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@56c698e3]
+2023-08-21 08:36:23 - Starting DocMgtApplicationTests using Java 17.0.6 on SOLVDEV86 with PID 36756 (started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 08:36:23 - The following profiles are active: test
+2023-08-21 08:36:23 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-21 08:36:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 08:36:24 - Finished Spring Data repository scanning in 106 ms. Found 6 JPA repository interfaces.
+2023-08-21 08:36:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 08:36:25 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-21 08:36:25 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-21 08:36:25 - HikariPool-1 - Starting...
+2023-08-21 08:36:26 - HikariPool-1 - Start completed.
+2023-08-21 08:36:26 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 08:36:26 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 08:36:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 08:36:29 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6557dcea, org.springframework.security.web.context.SecurityContextPersistenceFilter@50f65fe0, org.springframework.security.web.header.HeaderWriterFilter@665e18d5, org.springframework.web.filter.CorsFilter@76e4df53, org.springframework.security.web.authentication.logout.LogoutFilter@240c626d, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@6d18401b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@183e64a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a553110, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@569d6e0d, org.springframework.security.web.session.SessionManagementFilter@69b436a7, org.springframework.security.web.access.ExceptionTranslationFilter@6278371a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7104b117]
+2023-08-21 08:36:30 - Getting Admin Role using name => Super Admin
+2023-08-21 08:36:30 - Started DocMgtApplicationTests in 7.454 seconds (JVM running for 8.549)
+2023-08-21 08:36:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 08:36:31 - HikariPool-1 - Shutdown initiated...
+2023-08-21 08:36:31 - HikariPool-1 - Shutdown completed.
+2023-08-21 09:49:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:10 - HikariPool-3 - Shutdown initiated...
+2023-08-21 09:49:10 - HikariPool-3 - Shutdown completed.
+2023-08-21 09:49:11 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 13612 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 09:49:11 - The following profiles are active: test
+2023-08-21 09:49:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 09:49:11 - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-08-21 09:49:11 - Tomcat initialized with port(s): 8085 (http)
+2023-08-21 09:49:11 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-21 09:49:11 - Starting service [Tomcat]
+2023-08-21 09:49:11 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-21 09:49:11 - Initializing Spring embedded WebApplicationContext
+2023-08-21 09:49:11 - Root WebApplicationContext: initialization completed in 325 ms
+2023-08-21 09:49:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 09:49:11 - HikariPool-4 - Starting...
+2023-08-21 09:49:11 - HikariPool-4 - Start completed.
+2023-08-21 09:49:11 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 09:49:11 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 09:49:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 09:49:11 - LiveReload server is running on port 35729
+2023-08-21 09:49:11 - 
+
+Using generated security password: c609594d-127a-466a-8836-40ed5163b63b
+
+2023-08-21 09:49:11 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25ad9e6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b2fb984, org.springframework.security.web.header.HeaderWriterFilter@14d1940b, org.springframework.security.web.csrf.CsrfFilter@252980df, org.springframework.security.web.authentication.logout.LogoutFilter@31f286ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ca596b2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@24a003e6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7388b02c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33bcb86e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19e5752, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1977faa6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5338a8e9, org.springframework.security.web.session.SessionManagementFilter@72e9e07e, org.springframework.security.web.access.ExceptionTranslationFilter@795c7ee5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73a393e]
+2023-08-21 09:49:11 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-21 09:49:11 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-21 09:49:11 - Started DocMgtApplication in 0.718 seconds (JVM running for 4457.901)
+2023-08-21 09:49:11 - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-08-21 09:49:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:18 - HikariPool-4 - Shutdown initiated...
+2023-08-21 09:49:18 - HikariPool-4 - Shutdown completed.
+2023-08-21 09:49:18 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 13612 (C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 09:49:18 - The following profiles are active: test
+2023-08-21 09:49:18 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 09:49:18 - Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2023-08-21 09:49:19 - Tomcat initialized with port(s): 8085 (http)
+2023-08-21 09:49:19 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-08-21 09:49:19 - Starting service [Tomcat]
+2023-08-21 09:49:19 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-08-21 09:49:19 - Initializing Spring embedded WebApplicationContext
+2023-08-21 09:49:19 - Root WebApplicationContext: initialization completed in 660 ms
+2023-08-21 09:49:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 09:49:19 - HikariPool-5 - Starting...
+2023-08-21 09:49:19 - HikariPool-5 - Start completed.
+2023-08-21 09:49:19 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 09:49:19 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 09:49:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 09:49:19 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@154c43a3, org.springframework.security.web.context.SecurityContextPersistenceFilter@7febcaa3, org.springframework.security.web.header.HeaderWriterFilter@946b702, org.springframework.web.filter.CorsFilter@74301900, org.springframework.security.web.authentication.logout.LogoutFilter@6772a989, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@2b509c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e341b73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72f64b10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@742a4c94, org.springframework.security.web.session.SessionManagementFilter@3a91d7cc, org.springframework.security.web.access.ExceptionTranslationFilter@672ac88d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c4a92f5]
+2023-08-21 09:49:19 - LiveReload server is running on port 35729
+2023-08-21 09:49:19 - Starting ProtocolHandler ["http-nio-8085"]
+2023-08-21 09:49:19 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-08-21 09:49:20 - Getting Admin Role using name => Super Admin
+2023-08-21 09:49:20 - Started DocMgtApplication in 1.827 seconds (JVM running for 4466.339)
+2023-08-21 09:49:20 - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsServiceImpl and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-08-21 09:49:21 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests], using SpringBootContextLoader
+2023-08-21 09:49:21 - Could not detect default resource locations for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-08-21 09:49:21 - Could not detect default configuration classes for test class [com.doc.mgt.system.docmgt.DocMgtApplicationTests]: DocMgtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-08-21 09:49:21 - Found @SpringBootConfiguration com.doc.mgt.system.docmgt.DocMgtApplication for test class com.doc.mgt.system.docmgt.DocMgtApplicationTests
+2023-08-21 09:49:21 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-08-21 09:49:21 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c530d1e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c25e6c4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@85e6769, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c5ee75e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48a12036, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bf1ec20, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70efb718, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b70da4c, org.springframework.test.context.event.EventPublishingTestExecutionListener@4a11eb84, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4e858e0a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@435fb7b5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e70a728, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@b7838a9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@696f0212, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5733f295, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3146bc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@56c698e3]
+2023-08-21 09:49:22 - Starting DocMgtApplicationTests using Java 17.0.6 on SOLVDEV86 with PID 27032 (started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\old code\doc-mgt)
+2023-08-21 09:49:22 - The following profiles are active: test
+2023-08-21 09:49:22 - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-21 09:49:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 09:49:23 - Finished Spring Data repository scanning in 140 ms. Found 6 JPA repository interfaces.
+2023-08-21 09:49:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 09:49:24 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-08-21 09:49:24 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-21 09:49:24 - HikariPool-1 - Starting...
+2023-08-21 09:49:25 - HikariPool-1 - Start completed.
+2023-08-21 09:49:25 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-08-21 09:49:26 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 09:49:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 09:49:28 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3431cb1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2eea0775, org.springframework.security.web.header.HeaderWriterFilter@1c2273f6, org.springframework.web.filter.CorsFilter@42c9f2cd, org.springframework.security.web.authentication.logout.LogoutFilter@496e2bdd, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@42bbd21c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b6fea12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75c095a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@797c67c, org.springframework.security.web.session.SessionManagementFilter@7d43c89f, org.springframework.security.web.access.ExceptionTranslationFilter@1bdb6b36, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@308d8de8]
+2023-08-21 09:49:29 - Getting Admin Role using name => Super Admin
+2023-08-21 09:49:29 - Started DocMgtApplicationTests in 8.113 seconds (JVM running for 9.242)
+2023-08-21 09:49:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 09:49:30 - HikariPool-1 - Shutdown initiated...
+2023-08-21 09:49:30 - HikariPool-1 - Shutdown completed.
+2023-08-21 10:08:27 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2m40s893ms447µs500ns).
+2023-08-21 10:45:19 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=8m51s631ms788µs400ns).
+2023-08-21 11:43:57 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=46m7s540ms552µs500ns).
+2023-08-21 12:04:02 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=3m34s312ms160µs500ns).
+2023-08-21 16:33:37 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=24m18s561ms190µs400ns).
+2023-08-21 17:52:32 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1h16m22s778ms764µs300ns).
+2023-08-21 19:03:03 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1h1s302ms317µs800ns).
+2023-08-21 19:14:21 - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=5m17s526ms837µs900ns).

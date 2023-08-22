@@ -1,7 +1,7 @@
 package com.doc.mgt.system.docmgt.document.model;
 
-import com.doc.mgt.system.docmgt.document.dto.CreateDocumentTypeDTO;
 import com.doc.mgt.system.docmgt.document.dto.DocumentDTO;
+import com.doc.mgt.system.docmgt.document.dto.DocumentTypeDTO;
 import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
@@ -43,8 +43,8 @@ public class Document {
         BeanUtils.copyProperties(document, documentDTO);
 
         if (Objects.nonNull(document.getType())) {
-            CreateDocumentTypeDTO createDocumentTypeDTO = DocumentType.getDocumentTypeDTO(document.getType());
-            documentDTO.setType(createDocumentTypeDTO);
+            DocumentTypeDTO documentTypeDTO = DocumentType.getDocumentTypeDTO(document.getType());
+            documentDTO.setType(documentTypeDTO);
         }
 
         return documentDTO;
