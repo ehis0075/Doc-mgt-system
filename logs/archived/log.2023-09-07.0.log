@@ -1,0 +1,31 @@
+2023-09-07 13:14:37 - HV000001: Hibernate Validator 6.2.0.Final
+2023-09-07 13:14:37 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 39324 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-09-07 13:14:37 - The following profiles are active: test
+2023-09-07 13:14:37 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-07 13:14:37 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-07 13:14:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-07 13:14:39 - Finished Spring Data repository scanning in 166 ms. Found 6 JPA repository interfaces.
+2023-09-07 13:14:40 - Tomcat initialized with port(s): 5042 (http)
+2023-09-07 13:14:40 - Initializing ProtocolHandler ["http-nio-5042"]
+2023-09-07 13:14:40 - Starting service [Tomcat]
+2023-09-07 13:14:40 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-07 13:14:40 - Initializing Spring embedded WebApplicationContext
+2023-09-07 13:14:40 - Root WebApplicationContext: initialization completed in 3431 ms
+2023-09-07 13:14:41 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-07 13:14:41 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-09-07 13:14:41 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-07 13:14:41 - HikariPool-1 - Starting...
+2023-09-07 13:14:42 - HikariPool-1 - Start completed.
+2023-09-07 13:14:42 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2023-09-07 13:14:43 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-07 13:14:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-07 13:14:44 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-07 13:14:44 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@599951a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e31583f, org.springframework.security.web.header.HeaderWriterFilter@525df2c4, org.springframework.web.filter.CorsFilter@3a3001e4, org.springframework.security.web.authentication.logout.LogoutFilter@2b4dfe5c, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@7f7b3a21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a349510, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ff88d64, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3856cbf1, org.springframework.security.web.session.SessionManagementFilter@582ade7b, org.springframework.security.web.access.ExceptionTranslationFilter@36d9b8c9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@701b456a]
+2023-09-07 13:14:45 - Unable to start LiveReload server
+2023-09-07 13:14:45 - Starting ProtocolHandler ["http-nio-5042"]
+2023-09-07 13:14:45 - Tomcat started on port(s): 5042 (http) with context path ''
+2023-09-07 13:14:46 - Getting Admin Role using name => Super Admin
+2023-09-07 13:14:46 - Started DocMgtApplication in 9.729 seconds (JVM running for 11.472)
+2023-09-07 13:19:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-07 13:19:31 - HikariPool-1 - Shutdown initiated...
+2023-09-07 13:19:31 - HikariPool-1 - Shutdown completed.

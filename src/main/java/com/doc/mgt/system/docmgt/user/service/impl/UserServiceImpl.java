@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 
             //if successful, set authentication object in the security context
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+//            SecurityContextHolder.getContext().setAuthentication(authentication);
 
             AdminUser user = userRepository.findByUsername(username);
 
