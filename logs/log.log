@@ -1354,3 +1354,78 @@ java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigin
 2023-10-12 11:08:47 - Root WebApplicationContext: initialization completed in 1775 ms
 2023-10-12 11:08:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
 2023-10-12 11:08:47 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-10-12 11:08:48 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-12 11:08:48 - HikariPool-1 - Starting...
+2023-10-12 11:08:51 - HikariPool-1 - Start completed.
+2023-10-12 11:08:51 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-10-12 11:09:02 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-12 11:09:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 11:09:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12 11:09:03 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5219f230, org.springframework.security.web.context.SecurityContextPersistenceFilter@74231c76, org.springframework.security.web.header.HeaderWriterFilter@7fd56917, org.springframework.web.filter.CorsFilter@754311f0, org.springframework.security.web.authentication.logout.LogoutFilter@41956604, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@46900182, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@618c1c6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7862f802, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aa0599b, org.springframework.security.web.session.SessionManagementFilter@3566474e, org.springframework.security.web.access.ExceptionTranslationFilter@3364e4df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ab4f6b7]
+2023-10-12 11:09:03 - LiveReload server is running on port 35729
+2023-10-12 11:09:03 - Starting ProtocolHandler ["http-nio-8085"]
+2023-10-12 11:09:03 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-10-12 11:09:07 - Getting Admin Role using name => Super Admin
+2023-10-12 11:09:09 - Started DocMgtApplication in 23.821 seconds (JVM running for 25.057)
+2023-10-12 11:10:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-12 11:10:52 - Initializing Servlet 'dispatcherServlet'
+2023-10-12 11:10:52 - Completed initialization in 1 ms
+2023-10-12 11:10:52 - Request to login with username ehis
+2023-10-12 11:10:52 - Getting the user ehis from the db
+2023-10-12 11:10:58 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@658d22ef (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:10:59 - Request to Generate jwt token for user ehis
+2023-10-12 11:10:59 - Successfully logged-in user ehis
+2023-10-12 11:13:44 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
