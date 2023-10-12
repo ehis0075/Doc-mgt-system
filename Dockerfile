@@ -17,7 +17,8 @@ WORKDIR /app
 
 COPY --from=build /home/app/target/dms-service.jar .
 
+ENV PORT 8085
+
+EXPOSE 8085
+
 ENTRYPOINT ["java", "-jar","dms-service.jar"]
-
-
-
