@@ -41,13 +41,12 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http)
             throws Exception {
 
-
         http.cors().and().csrf().disable().exceptionHandling()
                 .authenticationEntryPoint(jwtAuthenticationFilter).and()
                 .sessionManagement().sessionCreationPolicy
                         (SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
-                .antMatchers("/api/v1/users/sign-in", "/swagger-resources/**", "/configuration/security",
+                .antMatchers("/api/v1/users/hello","/api/v1/users/sign-in", "/swagger-resources/**", "/configuration/security",
                         "/swagger-ui.html", "/webjars/**", "/v2/api-docs", "/v3/api-docs", "/swagger-ui/**").permitAll()
                 .anyRequest()
                 .authenticated();
@@ -92,7 +91,7 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://**", "https://**", "http://127.0.0.1:5500/**", "172.22.54.111:3004", "https://document-management.vercel.app/**"));
+        configuration.setAllowedOrigins(Arrays.asList("*"));
         configuration.setAllowedMethods(Collections.singletonList("*"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Collections.singletonList("*"));
