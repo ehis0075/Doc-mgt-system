@@ -1429,3 +1429,440 @@ java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigin
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:37:32 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:37:37 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:37:42 - Request to login with username ehis
+2023-10-12 11:37:42 - Getting the user ehis from the db
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@510e44e0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5132f1e5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2399acbd (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@93d56a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@394c5243 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7f373156 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@11a59649 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@f833992 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5406bc6b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:42 - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@12fd9a3c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2023-10-12 11:37:46 - Request to Generate jwt token for user ehis
+2023-10-12 11:37:46 - Successfully logged-in user ehis
+2023-10-12 11:39:22 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:40:07 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:40:54 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
+	at org.springframework.web.cors.CorsConfiguration.validateAllowCredentials(CorsConfiguration.java:473)
+	at org.springframework.web.cors.CorsConfiguration.checkOrigin(CorsConfiguration.java:577)
+	at org.springframework.web.cors.DefaultCorsProcessor.checkOrigin(DefaultCorsProcessor.java:174)
+	at org.springframework.web.cors.DefaultCorsProcessor.handleInternal(DefaultCorsProcessor.java:116)
+	at org.springframework.web.cors.DefaultCorsProcessor.processRequest(DefaultCorsProcessor.java:95)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:47:24 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 11:47:24 - HikariPool-1 - Shutdown initiated...
+2023-10-12 11:47:24 - HikariPool-1 - Shutdown completed.
+2023-10-12 11:47:31 - HV000001: Hibernate Validator 6.2.0.Final
+2023-10-12 11:47:31 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 19636 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-10-12 11:47:31 - The following profiles are active: local
+2023-10-12 11:47:31 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-12 11:47:31 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-12 11:47:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12 11:47:32 - Finished Spring Data repository scanning in 161 ms. Found 7 JPA repository interfaces.
+2023-10-12 11:47:33 - Tomcat initialized with port(s): 8085 (http)
+2023-10-12 11:47:33 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-10-12 11:47:33 - Starting service [Tomcat]
+2023-10-12 11:47:33 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-10-12 11:47:33 - Initializing Spring embedded WebApplicationContext
+2023-10-12 11:47:33 - Root WebApplicationContext: initialization completed in 2237 ms
+2023-10-12 11:47:34 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-12 11:47:34 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-10-12 11:47:34 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-12 11:47:34 - HikariPool-1 - Starting...
+2023-10-12 11:47:34 - HikariPool-1 - Start completed.
+2023-10-12 11:47:34 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-10-12 11:47:35 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-12 11:47:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 11:47:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12 11:47:37 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a6e67f3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a1e53c0, org.springframework.security.web.header.HeaderWriterFilter@2aefe66c, org.springframework.web.filter.CorsFilter@54764416, org.springframework.security.web.authentication.logout.LogoutFilter@38ec66a7, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@ba6c599, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7900f1c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6194ea61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61a50c57, org.springframework.security.web.session.SessionManagementFilter@2b9286bc, org.springframework.security.web.access.ExceptionTranslationFilter@50afafe8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49feda55]
+2023-10-12 11:47:37 - LiveReload server is running on port 35729
+2023-10-12 11:47:37 - Starting ProtocolHandler ["http-nio-8085"]
+2023-10-12 11:47:37 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-10-12 11:47:38 - Getting Admin Role using name => Super Admin
+2023-10-12 11:47:38 - Started DocMgtApplication in 7.354 seconds (JVM running for 8.63)
+2023-10-12 11:48:02 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-12 11:48:02 - Initializing Servlet 'dispatcherServlet'
+2023-10-12 11:48:02 - Completed initialization in 9 ms
+2023-10-12 11:48:02 - Request to login with username ehis
+2023-10-12 11:48:02 - Getting the user ehis from the db
+2023-10-12 11:48:02 - Request to Generate jwt token for user ehis
+2023-10-12 11:48:02 - Successfully logged-in user ehis
+2023-10-12 11:49:08 - Request to login with username ehis
+2023-10-12 11:49:08 - Getting the user ehis from the db
+2023-10-12 11:49:08 - Request to Generate jwt token for user ehis
+2023-10-12 11:49:08 - Successfully logged-in user ehis
+2023-10-12 11:52:50 - Request to login with username ehis
+2023-10-12 11:52:50 - Getting the user ehis from the db
+2023-10-12 11:52:50 - Request to Generate jwt token for user ehis
+2023-10-12 11:52:50 - Successfully logged-in user ehis
+2023-10-12 12:10:24 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:10:24 - HikariPool-1 - Shutdown initiated...
+2023-10-12 12:10:24 - HikariPool-1 - Shutdown completed.
+2023-10-12 12:10:31 - HV000001: Hibernate Validator 6.2.0.Final
+2023-10-12 12:10:31 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 16132 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-10-12 12:10:31 - The following profiles are active: local
+2023-10-12 12:10:31 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-12 12:10:31 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-12 12:10:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12 12:10:32 - Finished Spring Data repository scanning in 143 ms. Found 7 JPA repository interfaces.
+2023-10-12 12:10:33 - Tomcat initialized with port(s): 8085 (http)
+2023-10-12 12:10:33 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:10:33 - Starting service [Tomcat]
+2023-10-12 12:10:33 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-10-12 12:10:33 - Initializing Spring embedded WebApplicationContext
+2023-10-12 12:10:33 - Root WebApplicationContext: initialization completed in 2318 ms
+2023-10-12 12:10:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-12 12:10:33 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-10-12 12:10:33 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-12 12:10:34 - HikariPool-1 - Starting...
+2023-10-12 12:10:34 - HikariPool-1 - Start completed.
+2023-10-12 12:10:34 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-10-12 12:10:35 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-12 12:10:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:10:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12 12:10:37 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13e2c801, org.springframework.security.web.context.SecurityContextPersistenceFilter@275467cb, org.springframework.security.web.header.HeaderWriterFilter@326a1a76, org.springframework.web.filter.CorsFilter@32d9454d, org.springframework.security.web.authentication.logout.LogoutFilter@2f1fcf05, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@1ab5b1f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@369cde83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48e2462a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d38c137, org.springframework.security.web.session.SessionManagementFilter@7a14d383, org.springframework.security.web.access.ExceptionTranslationFilter@6f8df8d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b007a0c]
+2023-10-12 12:10:38 - LiveReload server is running on port 35729
+2023-10-12 12:10:38 - Starting ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:10:38 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-10-12 12:10:39 - Getting Admin Role using name => Super Admin
+2023-10-12 12:10:39 - Started DocMgtApplication in 8.27 seconds (JVM running for 9.792)
+2023-10-12 12:10:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:10:52 - HikariPool-1 - Shutdown initiated...
+2023-10-12 12:10:52 - HikariPool-1 - Shutdown completed.
+2023-10-12 12:10:57 - HV000001: Hibernate Validator 6.2.0.Final
+2023-10-12 12:10:57 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 18408 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-10-12 12:10:57 - The following profiles are active: local
+2023-10-12 12:10:57 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-12 12:10:57 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-12 12:10:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12 12:10:59 - Finished Spring Data repository scanning in 171 ms. Found 7 JPA repository interfaces.
+2023-10-12 12:10:59 - Tomcat initialized with port(s): 8085 (http)
+2023-10-12 12:10:59 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:10:59 - Starting service [Tomcat]
+2023-10-12 12:10:59 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-10-12 12:11:00 - Initializing Spring embedded WebApplicationContext
+2023-10-12 12:11:00 - Root WebApplicationContext: initialization completed in 2510 ms
+2023-10-12 12:11:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-12 12:11:00 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-10-12 12:11:00 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-12 12:11:00 - HikariPool-1 - Starting...
+2023-10-12 12:11:01 - HikariPool-1 - Start completed.
+2023-10-12 12:11:01 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-10-12 12:11:02 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-12 12:11:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:11:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12 12:11:04 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ccac0e, org.springframework.security.web.context.SecurityContextPersistenceFilter@a57456b, org.springframework.security.web.header.HeaderWriterFilter@19950b8a, org.springframework.web.filter.CorsFilter@46453a46, org.springframework.security.web.authentication.logout.LogoutFilter@62f5fb6b, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@73c44e18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64b54eb8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@edb27dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6802e520, org.springframework.security.web.session.SessionManagementFilter@7f89e833, org.springframework.security.web.access.ExceptionTranslationFilter@1970f4a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50719f77]
+2023-10-12 12:11:04 - LiveReload server is running on port 35729
+2023-10-12 12:11:04 - Starting ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:11:04 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-10-12 12:11:05 - Getting Admin Role using name => Super Admin
+2023-10-12 12:11:05 - Started DocMgtApplication in 7.939 seconds (JVM running for 9.063)
+2023-10-12 12:11:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-12 12:11:36 - Initializing Servlet 'dispatcherServlet'
+2023-10-12 12:11:36 - Completed initialization in 5 ms
+2023-10-12 12:11:36 - Request to login with username ehis
+2023-10-12 12:11:36 - Getting the user ehis from the db
+2023-10-12 12:11:36 - Request to Generate jwt token for user ehis
+2023-10-12 12:11:36 - Successfully logged-in user ehis
+2023-10-12 12:12:19 - Request to login with username ehis
+2023-10-12 12:12:19 - Getting the user ehis from the db
+2023-10-12 12:12:20 - Request to Generate jwt token for user ehis
+2023-10-12 12:12:20 - Successfully logged-in user ehis
+2023-10-12 12:15:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:15:43 - HikariPool-1 - Shutdown initiated...
+2023-10-12 12:15:43 - HikariPool-1 - Shutdown completed.
+2023-10-12 12:15:50 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 12532 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-10-12 12:15:50 - HV000001: Hibernate Validator 6.2.0.Final
+2023-10-12 12:15:50 - The following profiles are active: local
+2023-10-12 12:15:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-12 12:15:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-12 12:15:51 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12 12:15:51 - Finished Spring Data repository scanning in 163 ms. Found 7 JPA repository interfaces.
+2023-10-12 12:15:52 - Tomcat initialized with port(s): 8085 (http)
+2023-10-12 12:15:52 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:15:52 - Starting service [Tomcat]
+2023-10-12 12:15:52 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-10-12 12:15:53 - Initializing Spring embedded WebApplicationContext
+2023-10-12 12:15:53 - Root WebApplicationContext: initialization completed in 2434 ms
+2023-10-12 12:15:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-12 12:15:53 - HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-10-12 12:15:53 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-12 12:15:53 - HikariPool-1 - Starting...
+2023-10-12 12:15:54 - HikariPool-1 - Start completed.
+2023-10-12 12:15:54 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-10-12 12:15:55 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-12 12:15:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 12:15:56 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12 12:15:57 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35da089f, org.springframework.security.web.context.SecurityContextPersistenceFilter@157b203b, org.springframework.security.web.header.HeaderWriterFilter@7dec92c5, org.springframework.web.filter.CorsFilter@5aa7ede6, org.springframework.security.web.authentication.logout.LogoutFilter@5b1709be, com.doc.mgt.system.docmgt.security.JwtAuthorizationFilter@4e526ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66843c55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a67624b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d79c1b2, org.springframework.security.web.session.SessionManagementFilter@18427b38, org.springframework.security.web.access.ExceptionTranslationFilter@5a0c8007, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@246efb05]
+2023-10-12 12:15:57 - LiveReload server is running on port 35729
+2023-10-12 12:15:57 - Starting ProtocolHandler ["http-nio-8085"]
+2023-10-12 12:15:57 - Tomcat started on port(s): 8085 (http) with context path ''
+2023-10-12 12:15:58 - Getting Admin Role using name => Super Admin
+2023-10-12 12:15:58 - Started DocMgtApplication in 8.184 seconds (JVM running for 9.233)
+2023-10-12 12:16:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-12 12:16:06 - Initializing Servlet 'dispatcherServlet'
+2023-10-12 12:16:06 - Completed initialization in 1 ms
