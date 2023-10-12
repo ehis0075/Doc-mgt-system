@@ -15,5 +15,7 @@ public class CreateUpdateUserDTO {
     @NotNull
     private Long roleId;
 
+    private Long departmentId;
+
     private String password;
 }

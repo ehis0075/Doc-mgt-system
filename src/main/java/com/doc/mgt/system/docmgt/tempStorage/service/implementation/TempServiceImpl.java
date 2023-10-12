@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.tempStorage.service.implementation;
 
+import com.doc.mgt.system.docmgt.department.model.Department;
 import com.doc.mgt.system.docmgt.document.model.Document;
 import com.doc.mgt.system.docmgt.document.repository.DocumentRepository;
 import com.doc.mgt.system.docmgt.document.service.DocumentService;
@@ -9,7 +10,6 @@ import com.doc.mgt.system.docmgt.tempStorage.dto.TempPerformActionDTO;
 import com.doc.mgt.system.docmgt.tempStorage.dto.TempResponseDTO;
 import com.doc.mgt.system.docmgt.tempStorage.enums.TempStatus;
 import com.doc.mgt.system.docmgt.tempStorage.service.TempService;
-import com.doc.mgt.system.docmgt.user.model.AdminUser;
 import com.doc.mgt.system.docmgt.user.service.UserService;
 import com.doc.mgt.system.docmgt.util.GeneralUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -32,8 +32,8 @@ public class TempServiceImpl implements TempService {
     }
 
     @Override
-    public TempResponseDTO performTempActionForDoc(TempPerformActionDTO performActionDTO, Long docId, String username) {
-        log.info("Request to approve document upload{}, by {}", performActionDTO, username);
+    public TempResponseDTO performTempActionForDoc(TempPerformActionDTO performActionDTO, Long docId, String approvalPersonEmail) {
+        log.info("Request to approve document upload{}, by {}", performActionDTO, approvalPersonEmail);
 
         TempStatus status = performActionDTO.getStatus();
         String reason = performActionDTO.getReason();
@@ -52,13 +52,18 @@ public class TempServiceImpl implements TempService {
         //validate that id exist
         Document document = documentService.getDocumentById(docId);
 
+        String creatorPersonEmail = document.getCreatedBy();
+
         //check if user is not one who created
-        if (document.getCreatedBy().equals(username)) {
+        if (creatorPersonEmail.equals(approvalPersonEmail)) {
             throw new GeneralException(ResponseCodeAndMessage.OPERATION_NOT_SUPPORTED_93.responseCode, "User who uploaded cannot perform action on it");
         }
 
         // get the user for approval
-        AdminUser user = adminService.getUserByUsername(username);
+        Department approvalPersonDept = adminService.getUserByUsername(approvalPersonEmail).getDepartment();
+
+        Department creatorPersonDept = adminService.getUserByUsername(creatorPersonEmail).getDepartment();
+
 
         //verifies that status is approved and it is currently pending
         if (!document.getStatus().equals(TempStatus.PENDING)) {
@@ -71,17 +76,26 @@ public class TempServiceImpl implements TempService {
             log.info("Performing approved action");
 
             try {
+
+                if (!Objects.equals(approvalPersonDept, creatorPersonDept)) {
+                    // this approval person is not in the same dept as the creator
+                    log.info("Not in the same dept");
+
+                    throw new GeneralException(ResponseCodeAndMessage.AN_ERROR_OCCURRED_96.responseCode,
+                            "Only Admin users in the same department as the creator can approve");
+                }
+
                 document.setApproved(true);
 
-                updateDocument(TempStatus.APPROVED, reason, username, document);
+                updateDocument(TempStatus.APPROVED, reason, approvalPersonEmail, document);
             } catch (Exception e) {
-                updateDocument(TempStatus.DECLINED, e.getCause().getMessage(), username, document);
+                updateDocument(TempStatus.DECLINED, e.getCause().getMessage(), approvalPersonEmail, document);
 
                 throw new GeneralException(e.getMessage(), e.getCause().getMessage());
             }
 
         } else if (status.equals(TempStatus.DECLINED)) {
-            updateDocument(TempStatus.DECLINED, reason, username, document);
+            updateDocument(TempStatus.DECLINED, reason, approvalPersonEmail, document);
         } else {
             throw new GeneralException(ResponseCodeAndMessage.AN_ERROR_OCCURRED_96.responseCode,
                     "Record is already " + document.getStatus().name());
