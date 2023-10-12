@@ -10,7 +10,10 @@ import com.doc.mgt.system.docmgt.general.enums.ResponseCodeAndMessage;
 import com.doc.mgt.system.docmgt.general.service.GeneralService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
@@ -22,7 +25,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
     private GeneralService generalService;
 
-        @PreAuthorize("hasAuthority('CREATE_DEPARTMENT')")
+//    @PreAuthorize("hasAuthority('CREATE_DEPARTMENT')")
     @PostMapping("/create")
     public Response createDepartment(@RequestBody CreateUpdateDepartmentRequestDTO requestDTO) {
 
@@ -31,7 +34,7 @@ public class DepartmentController {
     }
 
     // get all dept api
-    @PreAuthorize("hasAuthority('VIEW_DEPARTMENT')")
+//    @PreAuthorize("hasAuthority('VIEW_DEPARTMENT')")
     @PostMapping()
     public Response getAllDepartment(@RequestBody PageableRequestDTO request) {
 
