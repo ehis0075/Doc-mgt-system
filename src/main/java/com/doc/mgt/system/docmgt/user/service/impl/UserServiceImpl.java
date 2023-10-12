@@ -1,5 +1,6 @@
 package com.doc.mgt.system.docmgt.user.service.impl;
 
+import com.doc.mgt.system.docmgt.department.dto.DepartmentDTO;
 import com.doc.mgt.system.docmgt.department.model.Department;
 import com.doc.mgt.system.docmgt.department.service.DepartmentService;
 import com.doc.mgt.system.docmgt.exception.GeneralException;
@@ -234,7 +235,9 @@ public class UserServiceImpl implements UserService {
 
         //get role dto
         RoleDTO roleDTO = adminRoleService.getAdminRoleDTO(adminUser.getUserRole());
+        DepartmentDTO departmentDTO = departmentService.getDepartmentDTO(adminUser.getDepartment());
         adminUserDTO.setRole(roleDTO);
+        adminUserDTO.setDepartment(departmentDTO);
 
         return adminUserDTO;
     }
