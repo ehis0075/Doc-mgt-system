@@ -1336,3 +1336,21 @@ java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigin
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-12 11:08:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 11:08:38 - HikariPool-1 - Shutdown initiated...
+2023-10-12 11:08:38 - HikariPool-1 - Shutdown completed.
+2023-10-12 11:08:45 - HV000001: Hibernate Validator 6.2.0.Final
+2023-10-12 11:08:45 - Starting DocMgtApplication using Java 17.0.6 on SOLVDEV86 with PID 2864 (C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system\target\classes started by Ehis.Iribhogbe in C:\Users\ehis.iribhogbe\Desktop\gh\ehis\Doc-mgt-system)
+2023-10-12 11:08:45 - The following profiles are active: render
+2023-10-12 11:08:45 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-12 11:08:45 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-12 11:08:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12 11:08:46 - Finished Spring Data repository scanning in 99 ms. Found 7 JPA repository interfaces.
+2023-10-12 11:08:47 - Tomcat initialized with port(s): 8085 (http)
+2023-10-12 11:08:47 - Initializing ProtocolHandler ["http-nio-8085"]
+2023-10-12 11:08:47 - Starting service [Tomcat]
+2023-10-12 11:08:47 - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-10-12 11:08:47 - Initializing Spring embedded WebApplicationContext
+2023-10-12 11:08:47 - Root WebApplicationContext: initialization completed in 1775 ms
+2023-10-12 11:08:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-12 11:08:47 - HHH000412: Hibernate ORM core version 5.6.3.Final
