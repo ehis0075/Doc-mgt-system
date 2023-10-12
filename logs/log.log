@@ -1866,3 +1866,6 @@ java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigin
 2023-10-12 12:16:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-10-12 12:16:06 - Initializing Servlet 'dispatcherServlet'
 2023-10-12 12:16:06 - Completed initialization in 1 ms
+2023-10-12 13:14:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12 13:14:39 - HikariPool-1 - Shutdown initiated...
+2023-10-12 13:14:39 - HikariPool-1 - Shutdown completed.
